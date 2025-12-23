@@ -236,7 +236,10 @@
           <div class="col-lg-8">
             <div class="skills-container">
 
-              <a href="#portfolio" data-filter=".filter-branding" class="competence-card cmp-red">
+              <!--L'attribut onclick simule instantanément un clic sur le bouton de filtre correspondant dans votre portfolio-->
+              <a href="#portfolio" 
+                 onclick="document.querySelector('.portfolio-filters li[data-filter=\'.filter-branding\']').click()" 
+                 class="competence-card cmp-red">
                 <div class="competence-card-header">
                   <i class="bi bi-hdd-network"></i>
                   <h3>Administrer</h3>
@@ -245,7 +248,9 @@
               </a>
 
 
-              <a href="#portfolio" data-filter=".filter-web" class="competence-card cmp-orange">
+              <a href="#portfolio" 
+                 onclick="document.querySelector('.portfolio-filters li[data-filter=\'.filter-web\']').click()" 
+                 class="competence-card cmp-orange">
                 <div class="competence-card-header">
                   <i class="bi bi-diagram-3"></i>
                   <h3>Connecter</h3>
@@ -254,7 +259,9 @@
               </a>
 
 
-              <a href="#portfolio" data-filter=".filter-photography" class="competence-card cmp-yellow">
+              <a href="#portfolio" 
+                 onclick="document.querySelector('.portfolio-filters li[data-filter=\'.filter-photography\']').click()" 
+                 class="competence-card cmp-yellow">
                 <div class="competence-card-header">
                   <i class="bi bi-code-slash"></i>
                   <h3>Programmer</h3>
@@ -262,7 +269,9 @@
                    <p class="competence-desc">Créer des scripts, outils et applications informatiques.</p>
               </a>
 
-              <a href="#portfolio" data-filter=".filter-print" class="competence-card cmp-green">
+              <a href="#portfolio" 
+                 onclick="document.querySelector('.portfolio-filters li[data-filter=\'.filter-print\']').click()" 
+                 class="competence-card cmp-green">
                 <div class="competence-card-header">
                   <i class="bi bi-shield-lock"></i>
                   <h3>Sécuriser</h3>
@@ -271,7 +280,9 @@
               </a>
 
 
-             <a href="#portfolio" data-filter=".filter-surveiller" class="competence-card cmp-blue">
+             <a href="#portfolio" 
+                onclick="document.querySelector('.portfolio-filters li[data-filter=\'.filter-surveiller\']').click()" 
+                class="competence-card cmp-blue">
                 <div class="competence-card-header">
                   <i class="bi bi-search"></i>
                   <h3>Surveiller</h3>
