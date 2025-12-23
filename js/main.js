@@ -212,20 +212,3 @@
 
 })();
 
-document.querySelectorAll('.competence-card').forEach(card => {
-  card.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const filter = this.getAttribute('data-filter');
-    const btn = document.querySelector(`.portfolio-filters li[data-filter="${filter}"]`);
-
-    // scroll fluide vers la section portfolio
-    const target = document.querySelector('#portfolio');
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-
-    // active le filtre Isotope existant
-    if (btn) btn.click();
-  });
-});
