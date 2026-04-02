@@ -214,44 +214,87 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // === Compétences → filtrage du portfolio ===
-  document.querySelectorAll('.competence-card').forEach(card => {
-    card.addEventListener('click', (e) => {
+  // === Accordéon compétences : déplier/replier ===
+  document.querySelectorAll('.competence-card-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const card = header.closest('.competence-card');
+      card.classList.toggle('is-open');
+    });
+  });
+
+  // === Bouton "Voir les projets associés" : scroll fluide + filtre Isotope ===
+  document.querySelectorAll('.btn-voir-projets').forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
+      e.stopPropagation();
 
-      const filter = card.getAttribute('data-filter');
-      const targetBtn = document.querySelector(
-        `.portfolio-filters li[data-filter="${filter}"]`
-      );
+      const filterClass = btn.getAttribute('data-filter');
+      const projetsSection = document.getElementById('projets');
+      if (!projetsSection) return;
 
-      // Scroll vers le portfolio
-      document.querySelector('#portfolio')
-        ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Calcul offset pour tenir compte de la sidebar fixe
+      const scrollMarginTop = parseInt(getComputedStyle(projetsSection).scrollMarginTop) || 0;
+      const targetY = projetsSection.getBoundingClientRect().top + window.scrollY - scrollMarginTop;
 
-      // Appliquer le filtre
-      if (targetBtn) targetBtn.click();
-    });
-  });
+      // Scroll fluide natif
+      window.scrollTo({ top: targetY, behavior: 'smooth' });
 
-  // === Gestion des filtres du portfolio (sans Isotope) ===
-  const filterButtons = document.querySelectorAll('.portfolio-filters li');
-  const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
-
-      filterButtons.forEach(b => b.classList.remove('filter-active'));
-      btn.classList.add('filter-active');
-
-      portfolioItems.forEach(item => {
-        if (filter === '*' || item.classList.contains(filter.substring(1))) {
-          item.style.display = 'block';
-        } else {
-          item.style.display = 'none';
+      // Délai calé sur la durée réelle du scroll (~600ms) puis filtre + flash
+      setTimeout(() => {
+        // Appliquer le filtre Isotope si renseigné
+        if (filterClass) {
+          const targetFilterBtn = document.querySelector(
+            `.isotope-filters li[data-filter="${filterClass}"]`
+          );
+          if (targetFilterBtn) targetFilterBtn.click();
         }
-      });
+
+        // Petit flash visuel sur la section pour guider l'œil
+        projetsSection.classList.add('section-highlight');
+        setTimeout(() => projetsSection.classList.remove('section-highlight'), 800);
+      }, 650);
     });
   });
 
+});
+document.addEventListener('DOMContentLoaded', () => {
+  // === Modale réflexive AC (6 blocs) ===
+  const overlay  = document.getElementById('ac-modal-overlay');
+  const closeBtn = document.getElementById('ac-modal-close');
+
+  function openAcModal(trigger) {
+    document.getElementById('ac-modal-title').textContent    = trigger.dataset.title      || '';
+    document.getElementById('ac-txt-fait').textContent       = trigger.dataset.fait       || '';
+    document.getElementById('ac-txt-pourquoi').textContent   = trigger.dataset.pourquoi   || '';
+    document.getElementById('ac-txt-comment').textContent    = trigger.dataset.comment    || '';
+    document.getElementById('ac-txt-difficultes').textContent= trigger.dataset.difficultes|| '';
+    document.getElementById('ac-txt-appris').textContent     = trigger.dataset.appris     || '';
+    document.getElementById('ac-txt-autrement').textContent  = trigger.dataset.autrement  || '';
+    overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeAcModal() {
+    overlay.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Délégation d'événements sur tous les ac-trigger (présents et futurs)
+  document.addEventListener('click', function(e) {
+    const trigger = e.target.closest('.ac-trigger');
+    if (trigger) {
+      e.stopPropagation();
+      openAcModal(trigger);
+      return;
+    }
+    // Fermeture si clic sur le bouton close ou sur l'overlay
+    if (e.target === overlay || e.target.closest('#ac-modal-close')) {
+      closeAcModal();
+    }
+  });
+
+  // Fermeture avec la touche Échap
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeAcModal();
+  });
 });

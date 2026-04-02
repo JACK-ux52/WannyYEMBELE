@@ -2702,13 +2702,12 @@ section,
 
 .cmp-red { background: #c00000; }          /* Administrer */
 .cmp-orange { background: #F78E43; }       /* Connecter */
-.cmp-yellow { background: #FFC000; }       /* Programmer */
-.cmp-green { background: #92D050; color:#2d2d2d;} /* Sécuriser */
-.cmp-blue { background: #002060; }         /* Surveiller */
+.cmp-yellow { background: #FFC000; color:#2d2d2d ;}       /* Programmer */
 
-.cmp-green .competence-card-header h3,
-.cmp-green .competence-desc { color: #2d2d2d !important; }
-.cmp-green .competence-card-header i { color: #2d2d2d !important; }
+.cmp-yellow .competence-card-header h3,
+.cmp-yellow .competence-desc { color: #2d2d2d !important; }
+.cmp-yellow .competence-card-header i { color: #2d2d2d !important; }
+
 
 /* Décale le contenu pour ne pas passer sous la sidebar */
 #legal {
@@ -2830,4 +2829,428 @@ button,
     top: 15px;
     padding: 6px 12px;
   }
+}
+.competence-card {
+  cursor: default;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  padding: 0;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  text-decoration: none;
+  display: block;
+}
+.competence-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+}
+.competence-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  cursor: pointer;
+  user-select: none;
+}
+.competence-card-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.competence-card-title i {
+  font-size: 1.4rem;
+}
+.competence-card-title h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.competence-chevron {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+.competence-card.is-open .competence-chevron {
+  transform: rotate(180deg);
+}
+.competence-desc {
+  margin: 0 20px 14px 20px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+.competence-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.3s ease;
+  padding: 0 20px;
+}
+.competence-card.is-open .competence-details {
+  max-height: 400px;
+  padding: 0 20px 16px 20px;
+}
+.competence-skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px 0;
+}
+.competence-skills-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.competence-skills-list li i {
+  font-size: 1rem;
+  margin-top: 1px;
+  flex-shrink: 0;
+}
+.btn-voir-projets {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 4px;
+  background: rgba(255,255,255,0.18);
+  color: inherit;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.btn-voir-projets:hover {
+  background: rgba(255,255,255,0.32);
+  transform: translateX(3px);
+  color: inherit;
+}
+/* Double-clic pour fermer aussi */
+.competence-card-header:active {
+  opacity: 0.85;
+}
+/* Style des mini-liens AC */
+.ac-links-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.ac-mini-link {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--accent-color);
+    color: var(--nav-color);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+    text-decoration: none;
+}
+
+.ac-mini-link:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+/* Boîte d'aperçu */
+.ac-preview-box {
+    background: #f8f9fa;
+    border-left: 4px solid var(--accent-color);
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    color: #333;
+}
+
+.preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Divisé en 3 blocs */
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.preview-block {
+    background: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.preview-block h5 {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.preview-block p {
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.btn-close-preview {
+    margin-top: 10px;
+    font-size: 0.7rem;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+/* Style des lignes AC */
+.ac-trigger {
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+.ac-trigger:hover {
+  background: rgba(0,0,0,0.05);
+  color: var(--accent-color);
+}
+
+/* Le conteneur d'aperçu interne */
+.ac-preview-container {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-left: 4px solid var(--accent-color);
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.preview-top {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.preview-title-text {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.preview-close {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.preview-body-grid {
+  display: flex;
+  gap: 10px;
+}
+
+.p-block {
+  flex: 1;
+  font-size: 0.85rem;
+}
+
+.p-block strong {
+  display: block;
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+}
+/* ============================================================
+   MODALE RÉFLEXIVE AC — 6 blocs (avant-plan)
+   ============================================================ */
+
+/* Fond sombre derrière la modale */
+.ac-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: acFadeIn 0.2s ease;
+}
+
+@keyframes acFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Boîte principale */
+.ac-modal-box {
+  background: var(--surface-color, #293443);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 780px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+  animation: acSlideUp 0.25s ease;
+}
+
+@keyframes acSlideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* En-tête modale */
+.ac-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.ac-modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-color, #22e7a1);
+  margin: 0;
+  line-height: 1.4;
+  flex: 1;
+  padding-right: 16px;
+}
+
+.ac-modal-close {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  color: var(--default-color, #f3f4f6);
+  font-size: 1.4rem;
+  line-height: 1;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.ac-modal-close:hover {
+  background: rgba(255,255,255,0.22);
+  transform: rotate(90deg);
+}
+
+/* Corps modale */
+.ac-modal-body {
+  padding: 24px;
+}
+
+/* Grille des 6 blocs */
+.ac-reflexive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (max-width: 600px) {
+  .ac-reflexive-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Bloc individuel */
+.ac-reflexive-block {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.ac-reflexive-block:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+/* Icône colorée selon le bloc */
+.ac-block-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.block-fait       .ac-block-icon { background: rgba(34, 231, 161, 0.15); color: #22e7a1; }
+.block-pourquoi   .ac-block-icon { background: rgba(99, 179, 237, 0.15);  color: #63b3ed; }
+.block-comment    .ac-block-icon { background: rgba(246, 173, 85, 0.15);  color: #f6ad55; }
+.block-difficultes .ac-block-icon { background: rgba(252, 129, 74, 0.15); color: #fc814a; }
+.block-appris     .ac-block-icon { background: rgba(183, 148, 244, 0.15); color: #b794f4; }
+.block-autrement  .ac-block-icon { background: rgba(237, 100, 166, 0.15); color: #ed64a6; }
+
+/* Titre du bloc */
+.ac-reflexive-block h6 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 8px;
+  opacity: 0.85;
+}
+
+.block-fait       h6 { color: #22e7a1; }
+.block-pourquoi   h6 { color: #63b3ed; }
+.block-comment    h6 { color: #f6ad55; }
+.block-difficultes h6 { color: #fc814a; }
+.block-appris     h6 { color: #b794f4; }
+.block-autrement  h6 { color: #ed64a6; }
+
+/* Texte du bloc */
+.ac-reflexive-block p {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--default-color, #f3f4f6);
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Style des lignes AC cliquables */
+.ac-trigger {
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease, padding-left 0.2s ease;
+  position: relative;
+  border-left: 3px solid transparent;
+}
+.ac-trigger:hover {
+  background: rgba(34, 231, 161, 0.08);
+  color: var(--accent-color, #22e7a1);
+  border-left-color: var(--accent-color, #22e7a1);
+  padding-left: 14px;
+}
+.ac-trigger::after {
+  content: '\F138';
+  font-family: 'bootstrap-icons';
+  font-size: 0.75rem;
+  margin-left: 8px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  color: var(--accent-color, #22e7a1);
+}
+.ac-trigger:hover::after {
+  opacity: 1;
+}
+
+/* Agrandissement du max-height accordéon pour accueillir plus de lignes */
+.competence-card.is-open .competence-details {
+  max-height: 800px !important;
+}
+
+/* Flash visuel sur la section Projets lors du scroll depuis un bouton */
+@keyframes sectionFlash {
+  0%   { box-shadow: inset 0 0 0 0 rgba(34, 231, 161, 0); }
+  30%  { box-shadow: inset 0 0 0 4px rgba(34, 231, 161, 0.35); }
+  100% { box-shadow: inset 0 0 0 0 rgba(34, 231, 161, 0); }
+}
+.section-highlight {
+  animation: sectionFlash 0.8s ease forwards;
+  border-radius: 4px;
 }
