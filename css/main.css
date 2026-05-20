@@ -3254,3 +3254,108 @@ button,
   animation: sectionFlash 0.8s ease forwards;
   border-radius: 4px;
 }
+/* ==========================================================
+   STYLE DU RENDU MARKDOWN (projet.html)
+   ========================================================== */
+   .markdown-presentation {
+    background-color: var(--surface-color, #293443);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    color: var(--default-color);
+    font-family: var(--default-font);
+    line-height: 1.7;
+  }
+  
+  .markdown-presentation h1, 
+  .markdown-presentation h2, 
+  .markdown-presentation h3 {
+    color: var(--heading-color);
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    font-family: var(--heading-font);
+  }
+  
+  .markdown-presentation h1 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+  }
+  
+  .markdown-presentation h2 {
+    font-size: 1.8rem;
+    color: var(--accent-color);
+  }
+  
+  .markdown-presentation p {
+    margin-bottom: 1.2em;
+  }
+  
+  /* Style pour le code en ligne et les blocs de code */
+  .markdown-presentation code {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #f6ad55; /* Orange clair pour le code */
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.9em;
+  }
+  
+  .markdown-presentation pre {
+    background-color: #1a2332;
+    padding: 20px;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .markdown-presentation pre code {
+    background-color: transparent;
+    color: #e2e8f0;
+    padding: 0;
+  }
+  
+  /* Style pour les citations (blockquotes) */
+  .markdown-presentation blockquote {
+    border-left: 4px solid var(--accent-color);
+    background-color: rgba(34, 231, 161, 0.05);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+  }
+  
+  /* Style pour les images dans le Markdown */
+  .markdown-presentation img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Style pour les tableaux */
+  .markdown-presentation table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+  }
+  
+  .markdown-presentation th, 
+  .markdown-presentation td {
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .markdown-presentation th {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--accent-color);
+  }
+  
+  /* Adaptation pour mobile */
+  @media (max-width: 768px) {
+    .markdown-presentation {
+      padding: 20px;
+    }
+  }
