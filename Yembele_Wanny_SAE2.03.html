@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Compte Rendu SAE 2.03 - YEMBELE Wanny</title>
+
+  <link href="assets/img/favicon_yw_33.png" rel="icon">
+  <link href="assets/img/apple-touch-icon-yw.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column justify-content-between">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="header-top">
+      <div class="profile-img">
+        <div class="profile-monogram">
+          <a href="index.html"><span>YW</span></a>
+       </div>
+     </div> 
+    </div>
+    <div class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">YEMBELE Wanny</h1>
+    </div>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Accueil</a></li>
+        <li><a href="index.html#about"><i class="bi bi-person navicon"></i>À propos de moi</a></li>
+        <li><a href="index.html#skills"><i class="bi bi-gear-fill navicon"></i>Compétences</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i>Mon CV</a></li>
+        <li><a href="index.html#projets" class="active"><i class="bi bi-folder2-open navicon"></i>Mes Projets</a></li>
+      </ul>
+    </nav>
+    <div class="social-links text-center">
+      <a href="https://github.com/JACK-ux52" target="_blank" class="github"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/wanny-yembele-77747238a" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>Extrait de compte rendu technique</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#projets">Projets</a></li>
+            <li class="current">SAE 2.03</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <div id="markdown-content" class="markdown-presentation">
+          <h1>SAE 2.03 - Mettre en place une solution informatique pour l'entreprise</h1>
+          <p class="text-muted"><strong>Conception et Déploiement d'une Application Web de Gestion de Parc Réseau</strong></p>
+          <hr class="my-4">
+
+          <h2>📋 Présentation Générale</h2>
+          <p>L'objectif de cette SAE était de concevoir, développer et déployer une application web dynamique complète permettant d'assurer la supervision, le suivi et la cartographie des équipements réseau d'une organisation (comme un département d'IUT).</p>
+          <p>Le projet intègre une architecture de base de données relationnelle, un serveur d'application dynamique et un déploiement conteneurisé multi-services via Docker.</p>
+
+          <h2>🛠️ Architecture et Technologies</h2>
+          <p>L'infrastructure repose sur un ensemble de services conteneurisés garantissant la modularité et la facilité de déploiement :</p>
+          <ul>
+            <li><strong>Framework Applicatif :</strong> Python avec <strong>Flask</strong> pour la gestion des routes, des sessions de connexion et du rendu dynamique via le moteur de templates Jinja2.</li>
+            <li><strong>Base de Données :</strong> <strong>PostgreSQL 14</strong>, assurant la persistance des données.</li>
+            <li><strong>ORM :</strong> <strong>Flask-SQLAlchemy</strong> pour interfacer le code Python avec la base PostgreSQL de manière sécurisée et typée.</li>
+            <li><strong>Sécurité :</strong> Hachage des mots de passe utilisateurs via <strong>Werkzeug Security</strong> (PBKDF2/Scrypt).</li>
+            <li><strong>Conteneurisation (Docker &amp; Compose) :</strong>
+              <ul>
+                <li><code>web</code> : Conteneur Flask hébergeant l'application Python.</li>
+                <li><code>db</code> : Conteneur PostgreSQL hébergeant la base de données relationnelle.</li>
+                <li><code>pgadmin</code> : Interface web d'administration de la base de données.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2>🗃️ Modèle de Données</h2>
+          <p>La base de données relationnelle contient trois tables principales :</p>
+          <ol>
+            <li><strong>Equipement :</strong> Stocke les caractéristiques des machines du parc (nom, type d'équipement [Switch, Routeur, PC, Imprimante, Téléphone], marque, adresse IP, localisation [salle], et statut [En marche, À l'arrêt]).</li>
+            <li><strong>Utilisateur :</strong> Gère les accès (nom d'utilisateur, adresse email, mot de passe haché et indicateur de rôle administrateur <code>est_admin</code>).</li>
+            <li><strong>Historique :</strong> Enregistre l'ensemble des actions effectuées sur le parc (ID de l'utilisateur, ID de l'équipement, action [Ajout, Modification, Suppression] et horodatage).</li>
+          </ol>
+
+          <h2>🚀 Fonctionnalités Clés</h2>
+          
+          <h3>1. Authentification et Contrôle d'Accès</h3>
+          <p>L'application propose un système d'inscription et de connexion sécurisé. Les actions critiques de modification du parc (Ajout, Modification et Suppression) sont strictement réservées aux utilisateurs possédant le rôle d'administrateur, tandis que les utilisateurs standard peuvent consulter l'inventaire et la cartographie.</p>
+
+          <h3>2. Tableau de Bord Dynamique (Accueil)</h3>
+          <p>La page d'accueil affiche en temps réel des statistiques clés sur l'état du réseau :</p>
+          <ul>
+            <li>Nombre total d'équipements enregistrés.</li>
+            <li>Proportion d'équipements actifs (En marche) vs inactifs (À l'arrêt).</li>
+            <li>Répartition quantitative du matériel par type (Switchs, Routeurs, PC, Imprimantes, Téléphones).</li>
+          </ul>
+
+          <h3>3. Inventaire Filtré et Pagination Avancée</h3>
+          <p>L'inventaire permet de visualiser l'ensemble du parc sous forme de tableau interactif. L'utilisateur peut filtrer les résultats par type, marque, salle ou statut. 
+          Pour optimiser les performances, l'affichage utilise la pagination SQLAlchemy (10 éléments par page) tout en **conservant dynamiquement les filtres actifs** d'une page à l'autre grâce aux paramètres de requête.</p>
+
+          <h3>4. Cartographie du Parc (Bâtiments)</h3>
+          <p>Une représentation visuelle sépare les équipements par bâtiments (H, I, J) et par salles (ex: H0-05, H1-11, I0-02, J0-01, J0-04, J0-09) ainsi qu'une zone de Réserve. Chaque salle affiche le nombre de machines présentes et sert de lien dynamique pour pré-filtrer l'inventaire sur cette salle.</p>
+
+          <h3>5. Journal d'Audit / Historique</h3>
+          <p>Un panneau d'historique paginé permet aux administrateurs de suivre les interventions sur le parc. Les dates et heures des actions sont automatiquement enregistrées selon le fuseau horaire de Paris (France) grâce à la bibliothèque <code>zoneinfo</code>.</p>
+
+          <h2>🎨 Design et Interface Utilisateur (UI/UX)</h2>
+          <p>L'interface a été entièrement révisée pour offrir une esthétique premium de type "Console Technique" :</p>
+          <ul>
+            <li><strong>Thème visuel :</strong> Style sombre (dark space blue) avec un effet de transparence <strong>"glassmorphism"</strong> (panneaux floutés avec bordures lumineuses subtiles).</li>
+            <li><strong>Typographie :</strong> Utilisation de la police moderne <em>Outfit</em>.</li>
+            <li><strong>Badges de Statut :</strong> Codes couleur harmonieux pour identifier immédiatement le statut (vert pour actif, rose pour inactif) et la salle.</li>
+            <li><strong>Micro-animations :</strong> Transitions fluides et élévations des cartes au survol de la souris.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <h3 class="sitename">YEMBELE Wanny</h3>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/JACK-ux52" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/wanny-yembele-77747238a" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright © 2025</span> <strong class="px-1 sitename">YEMBELE Wanny</strong> <span>Tous droits réservés</span><br>
+          <a href="légal.html">Mentions légales & Crédits</a>
+        </div>
+        <div class="credits">
+          Conçu par <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

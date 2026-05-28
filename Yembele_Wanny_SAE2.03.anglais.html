@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Technical Report SAE 2.03 - YEMBELE Wanny</title>
+
+  <link href="assets/img/favicon_yw_33.png" rel="icon">
+  <link href="assets/img/apple-touch-icon-yw.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header dark-background d-flex flex-column justify-content-between">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+    <div class="header-top">
+      <div class="profile-img">
+        <div class="profile-monogram">
+          <a href="index.anglais.html"><span>YW</span></a>
+       </div>
+     </div> 
+    </div>
+    <div class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">YEMBELE Wanny</h1>
+    </div>
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.anglais.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="index.anglais.html#about"><i class="bi bi-person navicon"></i>About</a></li>
+        <li><a href="index.anglais.html#skills"><i class="bi bi-gear-fill navicon"></i>Skills</a></li>
+        <li><a href="index.anglais.html#resume"><i class="bi bi-file-earmark-text navicon"></i>Resume</a></li>
+        <li><a href="index.anglais.html#projets" class="active"><i class="bi bi-folder2-open navicon"></i>Projects</a></li>
+      </ul>
+    </nav>
+    <div class="social-links text-center">
+      <a href="https://github.com/JACK-ux52" target="_blank" class="github"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/wanny-yembele-77747238a" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="page-title light-background">
+      <div class="container">
+        <h1>Extract of technical report</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.anglais.html">Home</a></li>
+            <li><a href="index.anglais.html#projets">Projets</a></li>
+            <li class="current">SAE 2.03</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="container" data-aos="fade-up">
+        <div id="markdown-content" class="markdown-presentation">
+          <h1>SAE 2.03 - Setting up an IT solution for the enterprise</h1>
+          <p class="text-muted"><strong>Design and Deployment of a Network Inventory Management Web Application</strong></p>
+          <hr class="my-4">
+
+          <h2>📋 General Presentation</h2>
+          <p>The objective of this SAE was to design, develop and deploy a complete dynamic web application to monitor, track, and map the network equipments of an organization (such as an IUT department).</p>
+          <p>The project integrates a relational database architecture, a dynamic application server, and a multi-service containerized deployment via Docker.</p>
+
+          <h2>🛠️ Architecture and Technologies</h2>
+          <p>The infrastructure relies on a set of containerized services ensuring modularity and ease of deployment:</p>
+          <ul>
+            <li><strong>Application Framework:</strong> Python avec <strong>Flask</strong> pour la gestion des routes, des sessions de connexion et du rendu dynamique via le moteur de templates Jinja2.</li>
+            <li><strong>Database:</strong> <strong>PostgreSQL 14</strong>, assurant la persistance des données.</li>
+            <li><strong>ORM:</strong> <strong>Flask-SQLAlchemy</strong> pour interfacer le code Python avec la base PostgreSQL de manière sécurisée et typée.</li>
+            <li><strong>Security:</strong> User password hashing via <strong>Werkzeug Security</strong> (PBKDF2/Scrypt).</li>
+            <li><strong>Containerization (Docker &amp; Compose):</strong>
+              <ul>
+                <li><code>web</code> : Conteneur Flask hébergeant l'application Python.</li>
+                <li><code>db</code> : Conteneur PostgreSQL hébergeant la base de données relationnelle.</li>
+                <li><code>pgadmin</code> : Interface web d'administration de la base de données.</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h2>🗃️ Data Model</h2>
+          <p>The relational database contains three main tables:</p>
+          <ol>
+            <li><strong>Equipement :</strong> Stores device details (name, equipment type [Switch, Router, PC, Printer, Phone], brand, IP address, room location, and status [Active, Inactive]).</li>
+            <li><strong>Utilisateur :</strong> Manages credentials (username, email address, hashed password, and est_admin administrator role).</li>
+            <li><strong>Historique :</strong> Logs all actions performed on the devices (user ID, equipment ID, action [Add, Edit, Delete], and timestamp).</li>
+          </ol>
+
+          <h2>🚀 Key Features</h2>
+          
+          <h3>1. Authentication and Access Control</h3>
+          <p>The application offers a secure signup and login system. Critical modifications (Add, Edit, and Delete) are strictly restricted to admin users, while standard users can only view the inventory and the cartography.</p>
+
+          <h3>2. Dynamic Dashboard (Home)</h3>
+          <p>The home page displays real-time key statistics on the network status:</p>
+          <ul>
+            <li>Total number of registered devices.</li>
+            <li>Ratio of active (Running) vs inactive (Stopped) devices.</li>
+            <li>Quantitative distribution of devices by type (Switches, Routers, PCs, Printers, Phones).</li>
+          </ul>
+
+          <h3>3. Filtered Inventory and Advanced Pagination</h3>
+          <p>The inventory displays all devices in an interactive table. Users can filter by type, brand, room, or status. To optimize performance, the list uses SQLAlchemy pagination (10 items per page) while dynamically preserving active search filters across pages using query parameters.</p>
+
+          <h3>4. Device Mapping (Buildings)</h3>
+          <p>A visual grid layout organizes devices by buildings (H, I, J) and rooms (e.g., H0-05, H1-11, I0-02, J0-01, J0-04, J0-09) as well as a Storage room. Each room shows the count of devices and acts as a dynamic link to pre-filter the inventory for that room.</p>
+
+          <h3>5. Audit Log / History</h3>
+          <p>A paginated audit log allows admins to track interventions. Action timestamps are automatically recorded in Paris (France) timezone using the zoneinfo library.</p>
+
+          <h2>🎨 Design and User Interface (UI/UX)</h2>
+          <p>The interface has been completely redesigned to offer a premium "Tech Console" aesthetic:</p>
+          <ul>
+            <li><strong>Thème visuel :</strong> Style sombre (dark space blue) avec un effet de transparence <strong>"glassmorphism"</strong> (panneaux floutés avec bordures lumineuses subtiles).</li>
+            <li><strong>Typographie :</strong> Utilisation de la police moderne <em>Outfit</em>.</li>
+            <li><strong>Badges de Statut :</strong> Codes couleur harmonieux pour identifier immédiatement le statut (vert pour actif, rose pour inactif) et la salle.</li>
+            <li><strong>Micro-animations :</strong> Transitions fluides et élévations des cartes au survol de la souris.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <h3 class="sitename">YEMBELE Wanny</h3>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/JACK-ux52" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/wanny-yembele-77747238a" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="container">
+        <div class="copyright">
+          <span>Copyright © 2025</span> <strong class="px-1 sitename">YEMBELE Wanny</strong> <span>All Rights Reserved</span><br>
+          <a href="légal.html">Legal Notice & Credits</a>
+        </div>
+        <div class="credits">
+          Original design by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

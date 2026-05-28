@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.stopPropagation();
 
       const filterClass = btn.getAttribute('data-filter');
-      const projetsSection = document.getElementById('projets');
+      const projetsSection = document.getElementById('projets') || document.getElementById('portfolio');
       if (!projetsSection) return;
 
       // Calcul offset pour tenir compte de la sidebar fixe
