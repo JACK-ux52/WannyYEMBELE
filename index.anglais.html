@@ -8,24 +8,38 @@
   <meta name="description" content="">
   <meta name="keywords" content="">
 
+  <!-- Favicons -->
   <link href="assets/img/favicon_yw_33.png" rel="icon">
   <link href="assets/img/apple-touch-icon-yw.png" rel="apple-touch-icon">
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+  <!-- Vendor CSS Files -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="vendor/aos/aos.css" rel="stylesheet">
   <link href="vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+
+<!-- Main CSS File -->
   <link href="css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: MyPage
+  * Template URL: https://bootstrapmade.com/mypage-bootstrap-personal-template/
+  * Updated: Sep 20 2025 with Bootstrap v5.3.8
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body class="index-page">
 
- <div class="language-switcher">
+  <div class="language-switcher">
   <a href="index.html" class="lang-link">FR</a>
   <span class="lang-sep">|</span>
   <span class="lang-link active">EN</span>
@@ -37,16 +51,15 @@
     <div class="header-top">
       <div class="profile-img">
         <div class="profile-monogram">
-          <a href="index.anglais.html"><span>YW</span></a>
-       </div>
-     </div> 
-   </div>
+          <a href="index.html"><span>YW</span></a>
+      </div>
+    </div> 
+  </div>
 
       <div class="logo d-flex align-items-center justify-content-center">
         <h1 class="sitename">YEMBELE Wanny</h1>
       </div>
 
-    </div>
 
     <nav id="navmenu" class="navmenu">
       <ul>
@@ -54,18 +67,20 @@
         <li><a href="#about"><i class="bi bi-person navicon"></i>About</a></li>
         <li><a href="#skills"><i class="bi bi-gear-fill navicon"></i>Skills</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>Resume</a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i>Portfolio</a></li>
+        <li><a href="#projets"><i class="bi bi-folder2-open navicon"></i>Projects</a></li>
       </ul>
     </nav>
 
     <div class="social-links text-center">
       <a href="https://github.com/JACK-ux52" target="_blank" class="github"><i class="bi bi-github"></i></a>
       <a href="https://www.linkedin.com/in/wanny-yembele-77747238a" target="_blank" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <a href="mailto:wanny.yembele@gmail.com" style="background:#28a745;border-color:#28a745;"><i class="bi bi-envelope-fill"></i></a>
     </div>
   </header>
 
   <main class="main">
 
+    <!-- Hero Section -->
     <section id="hero" class="hero section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -73,16 +88,21 @@
         <div class="row align-items-center">
           <div class="col-lg-6 order-2 order-lg-1">
             <div class="hero-content">
+              <div class="alternance-badge" data-aos="fade-up" data-aos-delay="150" style="display:inline-flex;align-items:center;gap:8px;background:rgba(40,167,69,0.12);border:1px solid rgba(40,167,69,0.4);border-radius:20px;padding:6px 14px;margin-bottom:14px;font-size:0.9rem;font-weight:600;color:#28a745;">
+                <span style="width:8px;height:8px;border-radius:50%;background:#28a745;display:inline-block;"></span>
+                Looking for a work-study program — Sept. 2026 intake
+              </div>
               <h1 data-aos="fade-up" data-aos-delay="200">
-                Student in B.U.T.
-                <span class="accent-text">Networks & Telecommunications</span>
+                Student in BUT
+                <span class="accent-text">Réseaux & Télécommunications</span>
               </h1>
               <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
-                Passionate about IT and the systems that connect us, I am currently discovering the foundations of digital infrastructure.
-                Curious and motivated, I learn to configure, secure and administer the networks of tomorrow while developing my first technical skills.
-                </p>
+                After validating my first year in Networks & Telecommunications, I am continuing into my 2nd year with solid foundations in system administration, network configuration (VLAN, routing), and virtualization.
+                 I am looking for a 2-year work-study program starting in September 2026 in the field of networks and telecommunications, to put my skills into practice while continuing to learn new technologies in the field.
+              </p>
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-                <a href="#portfolio" class="btn-primary">View my projects</a>
+                <a href="#projets" class="btn-primary">See my projects</a>
+                <a href="mailto:wanny.yembele@gmail.com" class="btn-primary" style="margin-left:10px;background:#28a745;border-color:#28a745;">Contact me</a>
               </div>
             </div>
           </div>
@@ -90,7 +110,7 @@
           <div class="col-lg-6 order-1 order-lg-2">
             <div class="hero-image" data-aos="fade-up" data-aos-delay="300">
               <div class="image-wrapper">
-                <img src="assets/img/profile/Image-server.jpg" alt="Server Image" class="img-fluid main-image">
+                <img src="assets/img/profile/Image-server.jpg" alt="Creative Designer Portfolio" class="img-fluid main-image">
                 <div class="floating-card card-1" data-aos="fade-up" data-aos-delay="600">
                   <i class="bi bi-cloud"></i>
                   <span>TCP/IP Protocols</span>
@@ -110,358 +130,374 @@
 
       </div>
 
-    </section>
-    
-   <section id="about" class="about section">
+    </section><!-- /Hero Section -->
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <!-- About Section -->
+    <section id="about" class="about section">
 
-          <div class="row justify-content-center">
-            <div class="col-lg-10">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-              <div class="intro-header text-center" data-aos="fade-up" data-aos-delay="150">
-                <h1>Hello, I am YEMBELE Wanny</h1>
-                <p class="subtitle">1st year student in B.U.T. Networks & Telecommunications</p>
-              </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
 
-              <div class="main-content-wrapper">
-                <div class="row justify-content-center">
+            <div class="intro-header text-center" data-aos="fade-up" data-aos-delay="150">
+              <h1>Hello, I am YEMBELE Wanny</h1>
+              <p class="subtitle">2nd-year student in BUT Networks & Telecommunications (starting September 2026) — Looking for a work-study program</p>
+            </div>
 
-                  <div class="col-lg-10" data-aos="fade-up" data-aos-delay="250">
-                    <div class="content-area">
+            <div class="main-content-wrapper">
+              <div class="row justify-content-center">
 
-                      <div class="story-block">
-                        <p>Currently, in the first year of BUT Networks and Telecommunications in Bethune,
-                          I am at the heart of a concrete learning to understand how the modern world communicates.
-                          Rather than just using technology, I'm trying to understand how it all works, from transmission cables to security protocols.
-                          What fascinates me is the rapid evolution of this field and the technical challenges it offers every day.</p>
-                        </p>
-                        <br>
-                        <p>
-                          My goal this year is to consolidate my basics in system administration (Linux), IP addressing and Python programming,
-                          while remaining open to all project opportunities that will allow me to put into practice what I learn in class.</p>
-                      </p>
-                      </div>
+                <div class="col-lg-10" data-aos="fade-up" data-aos-delay="250">
+                  <div class="content-area">
 
-                      <div class="expertise-grid">
-                        <div class="row">
-                          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="expertise-item d-flex flex-column align-items-center text-center">
-                              <div class="expertise-icon mb-3">
-                                <i class="bi bi-router"></i>
-                              </div>
-                              <div class="expertise-content">
-                                <h4>Learning Administration</h4>
-                                <p>Initiation to configuration and maintenance of local network infrastructure.</p>
-                              </div>
+                    <div class="story-block">
+                      <p>Having validated my first year of BUT Networks and Telecommunications in Béthune,
+                         I acquired solid foundations to understand how the modern world communicates: electricity and signals, digital systems architecture, local network configuration, web development, and database management.
+                         What passionates me is the speed of evolution of this field and the technical challenges it offers every day.</p>
+                      <br>
+                      <p>
+                        In my 2nd year (starting September 2026), my goal is to deepen my knowledge in system administration (Windows Server, Active Directory, advanced Linux), network configuration (VLAN, inter-VLAN routing, OSPF), and containerization (Docker) 
+                         while knowing that the work-study program will also lead me to discover and learn new technologies specific to the company that will host me.
+                         I am looking for a 2-year work-study program in the field of networks and telecommunications, without a specific industry sector in mind: the training and diversity of missions are what interest me most.</p>
+                    </div>
+
+                    <div class="expertise-grid">
+                      <div class="row">
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                          <div class="expertise-item d-flex flex-column align-items-center text-center">
+                            <div class="expertise-icon mb-3">
+                              <i class="bi bi-router"></i>
+                            </div>
+                            <div class="expertise-content">
+                              <h4>Network administration</h4>
+                              <p>Configuration and maintenance of local network infrastructures: VLAN, routing, Cisco IOS devices.</p>
                             </div>
                           </div>
+                        </div>
 
-                          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="350">
-                            <div class="expertise-item d-flex flex-column align-items-center text-center">
-                              <div class="expertise-icon mb-3">
-                                <i class="bi bi-shield-check"></i>
-                              </div>
-                              <div class="expertise-content">
-                                <h4>Fundamentals of Security</h4>
-                                <p>Discovery of communication protocols and awareness of good cybersecurity practices.</p>
-                              </div>
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="350">
+                          <div class="expertise-item d-flex flex-column align-items-center text-center">
+                            <div class="expertise-icon mb-3">
+                              <i class="bi bi-shield-check"></i>
+                            </div>
+                            <div class="expertise-content">
+                              <h4>Network security</h4>
+                              <p>Mastery of communication protocols and application of cybersecurity best practices (ANSSI SecNumAcadémie certified).</p>
                             </div>
                           </div>
+                        </div>
 
-                          <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="expertise-item d-flex flex-column align-items-center text-center">
-                              <div class="expertise-icon mb-3">
-                                <i class="bi bi-cpu"></i>
-                              </div>
-                              <div class="expertise-content">
-                                <h4>Services & Systems</h4>
-                                <p>Server management, IP addressing, and routing of critical services.
-                                  Explore the Linux environment, IP addressing, and connectivity-critical services.</p>
-                              </div>
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="400">
+                          <div class="expertise-item d-flex flex-column align-items-center text-center">
+                            <div class="expertise-icon mb-3">
+                              <i class="bi bi-cpu"></i>
+                            </div>
+                            <div class="expertise-content">
+                              <h4>Services & Systems</h4>
+                              <p>Administration of Linux and Windows Server servers, IP addressing, routing, and deployment of containerized services with Docker.</p>
                             </div>
                           </div>
                         </div>
                       </div>
-
                     </div>
+
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    
-    <section id="skills" class="skills section">
+    <!-- Skills Section -->
+      <section id="skills" class="skills section">
 
-          <div class="container section-title" data-aos="fade-up">
-            <h2>Portfolio</h2>
-          </div>
-          
-          <div class="container" data-aos="fade-up" data-aos-delay="100">
-            <div class="row">
-              <div class="col-lg-8">
-                <div class="skills-container">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Portfolio</h2>
+        </div>
+        
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row">
+            <div class="col-lg-8">
+              <div class="skills-container">
 
-                  <!-- ADMINISTRER -->
-                  <div class="competence-card cmp-red">
-                    <div class="competence-card-header">
-                      <div class="competence-card-title">
-                        <i class="bi bi-hdd-network"></i>
-                        <h3>Administer</h3>
-                      </div>
-                      <i class="bi bi-chevron-down competence-chevron"></i>
+                <!-- ADMINISTRER -->
+                <div class="competence-card cmp-red">
+                  <div class="competence-card-header">
+                    <div class="competence-card-title">
+                      <i class="bi bi-hdd-network"></i>
+                      <h3>Administer</h3>
                     </div>
-                    <p class="competence-desc">Administer networks and IT infrastructure.</p>
-                    
-                    <div class="competence-details">
-                      <ul class="competence-skills-list">
-                        <li class="ac-trigger"
-                            data-title="AC11.01 | Master the fundamental laws of electricity in order to work on network and telecommunications equipment"
-                            data-fait="Learning fundamental laws (R1.04), understanding mathematical implications (R1.13, R2.14), learning useful theorems (R2.05), and performing voltage, current, and resistance measurements on analog breadboards in labs (R2.04)."
-                            data-pourquoi="Understand the physical operation of electrically powered network equipment in order to work on them safely and knowledgeably."
-                            data-comment="Using analog breadboards, applying fundamental electrical laws, reading electrical diagrams, and tutorials."
-                            data-difficultes="Device calibration and interpretation, discovering complex physical theories and laws."
-                            data-appris="Electrical variables and signals are the core foundation of telecommunications."
-                            data-autrement="Take more time to redo exercises and laboratory manipulations.">
-                            AC11.01 | Master the fundamental laws of electricity in order to work on network and telecommunications equipment
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC11.02 | Understand the architecture and foundations of digital systems, the principles of information coding, communications, and the Internet"
-                            data-fait="Study of binary and hexadecimal systems, floating point representation, logic gates (R1.06), technical English (R1.10), digitization of information (R2.06), databases (R2.07), and web development (R2.09)."
-                            data-pourquoi="Understand the internal logic of computer systems and communication protocols."
-                            data-comment="Lectures, tutorials, and various practical exercises."
-                            data-difficultes="Floating point binary representation and digitization of information."
-                            data-appris="How logical systems work, web development, and database utilization."
-                            data-autrement="Work more on resources where I have gaps.">
-                            AC11.02 | Understand the architecture and foundations of digital systems, the principles of information coding, communications, and the Internet
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC11.03 | Configure the basic functions of the local area network"
-                            data-fait="Introduction to computer networks (R1.01) and study of active devices (R1.03)."
-                            data-pourquoi="Configure and understand the network services that route traffic within local area networks."
-                            data-comment="Lectures, IP addressing exercises, frame analysis, and local network lab configurations."
-                            data-difficultes="Understanding packet routing logic and configuring network equipment correctly."
-                            data-appris="How to construct a local network cabling plan and implement IP routing."
-                            data-autrement="Configure more network topologies manually to gain speed.">
-                            AC11.03 | Configure the basic functions of the local area network
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC11.04 | Master the roles and fundamental principles of operating systems to interact with them for network and services configuration and administration"
-                            data-fait="Studied principles and architecture of networks (detailed study of Ethernet, ARP, ICMP protocols / discovery of IPv4, TCP, UDP, and application protocols (R1.02)), operating system basics (Linux (R2.08)), technical English (R1.10), network services fundamentals (R2.03), and practiced Windows administration (R2.02)."
-                            data-pourquoi="I did this to acquire the basic skills required to configure a network or a server, as well as their associated services."
-                            data-comment="Lectures, various labs (TPs), and tutorials (TDs)."
-                            data-difficultes="Learning the principles of operating systems and network services fundamentals."
-                            data-appris="I can now administer a Windows server, a local network, and basic services."
-                            data-autrement="Redo the labs where I struggled to understand what I was doing.">
-                            AC11.04 | Master the roles and fundamental principles of operating systems to interact with them for network and services configuration and administration
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC11.05 | Identify local network malfunctions and know how to report them"
-                            data-fait="I used Wireshark software along with diagnostic commands (R2.02)."
-                            data-pourquoi="To identify and troubleshoot malfunctions in a local network."
-                            data-comment="Lectures and laboratory exercises."
-                            data-difficultes="Using Wireshark filters and identifying specific network issues."
-                            data-appris="I can easily use other diagnostic tools and find specific network issues faster."
-                            data-autrement="Practice more with frame capture tools (Wireshark) from the very beginning.">
-                            AC11.05 | Identify local network malfunctions and know how to report them
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC11.06 | Install a client workstation and explain the setup procedure"
-                            data-fait="I created and administered client workstations under Windows and Linux."
-                            data-pourquoi="Because setting up client workstations is a daily task of an administrator, and learning to document my work is essential for smooth teamwork."
-                            data-comment="Through multiple laboratory sessions."
-                            data-difficultes="Configuring OS environments like Windows."
-                            data-appris="Creating and administering client workstations."
-                            data-autrement="Nothing, I believe what I did during the year is already more than sufficient.">
-                            AC11.06 | Install a client workstation and explain the setup procedure
-                        </li>
-                      </ul>
-                      <a href="#portfolio" class="btn-voir-projets" data-filter=".filter-branding">
-                        <i class="bi bi-arrow-up-right-circle"></i> View associated projects
-                      </a>
-                    </div>
+                    <i class="bi bi-chevron-down competence-chevron"></i>
                   </div>
-
-                  <!-- CONNECT -->
-                  <div class="competence-card cmp-orange" data-filter=".filter-web">
-                    <div class="competence-card-header">
-                      <div class="competence-card-title">
-                        <i class="bi bi-diagram-3"></i>
-                        <h3>Connect</h3>
-                      </div>
-                      <i class="bi bi-chevron-down competence-chevron"></i>
-                    </div>
-                    <p class="competence-desc">Connect users and businesses to the Internet.</p>
-                    <div class="competence-details">
-                      <ul class="competence-skills-list">
-                        <li class="ac-trigger"
-                            data-title="AC12.01 | Measure, analyze, and comment on signals"
-                            data-fait="I generated signals and subsequently analyzed them using specific measuring instruments."
-                            data-pourquoi="Signal analysis is a fundamental basis in the daily life of a telecommunications technician."
-                            data-comment="Using an oscilloscope, signal generator, reading frequency graphs, and comparing theory with practice."
-                            data-difficultes="Correctly setting oscilloscope parameters, analyzing and commenting on the signals."
-                            data-appris="How to generate a signal and analyze simple signals."
-                            data-autrement="Conduct more research to better understand signal operations.">
-                            AC12.01 | Measure, analyze, and comment on signals
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC12.02 | Characterize elementary transmission systems"
-                            data-fait="Modeling and analyzing the operation of wireless links."
-                            data-pourquoi="Wireless networking is now omnipresent in companies. Understanding its propagation and interference mechanisms is required to deploy and secure reliable, high-performance WiFi networks."
-                            data-comment="Theoretical lectures, Shannon's formula, and lab sessions on transmission boards."
-                            data-difficultes="Linking mathematical formulas to observed physical realities and understanding the practical work."
-                            data-appris="Each transmission medium has its own constraints (bandwidth, attenuation, noise)."
-                            data-autrement="Use software simulations to visualize physical phenomena.">
-                            AC12.02 | Characterize elementary transmission systems
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC12.03 | Deploy transmission media"
-                            data-fait="I designed and deployed complete network topologies from scratch. This included IP addressing plan design, physical cabling, active equipment configuration, and final connectivity testing."
-                            data-pourquoi="Deploying and studying media helps analyze cabling structure, identify faults, and certify a local area network cabling installation."
-                            data-comment="Structured cabling labs, using a cable tester, and lectures."
-                            data-difficultes="Working effectively in a team."
-                            data-appris="Physical cabling quality is key to ensuring stable network performance, and planning work beforehand is essential."
-                            data-autrement="Practice cabling more beforehand to gain speed and precision.">
-                            AC12.03 | Deploy transmission media
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC12.04 | Connect ToIP systems"
-                            data-fait="Setting up an IP telephony system with Cisco and Fanvil IP phones."
-                            data-pourquoi="ToIP is gradually replacing traditional telephony in companies."
-                            data-comment="Configuring a Fanvil (Asterisk server), a Cisco (Alpine server), SIP account configuration, and call testing."
-                            data-difficultes="Understanding SIP/RTP protocols and diagnosing communication issues."
-                            data-appris="VoIP requires meticulous management of its servers."
-                            data-autrement="Work a bit more on the theoretical part.">
-                            AC12.04 | Connect ToIP systems
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC12.05 | Communicate with a third party and adapt one's speech"
-                            data-fait="Writing lab reports, oral presentations of results to peers."
-                            data-pourquoi="A network technician must know how to explain technical solutions to non-specialists."
-                            data-comment="Written and oral communication exercises, translating technical terms into everyday language."
-                            data-difficultes="Finding the right level of detail depending on the audience."
-                            data-appris="Discourse clarity is as important as technical mastery in the professional world."
-                            data-autrement="Systematically prepare a simplified glossary before any presentation.">
-                            AC12.05 | Communicate with a third party and adapt one's speech
-                        </li>
-                      </ul>
-                      <a href="#portfolio" class="btn-voir-projets" data-filter=".filter-web">
-                        <i class="bi bi-arrow-up-right-circle"></i> View associated projects
-                      </a>
-                    </div>
+                  <p class="competence-desc">Administer networks and IT infrastructure.</p>
+                  
+                  <div class="competence-details">
+                    <ul class="competence-skills-list">
+                      <li class="ac-trigger"
+                      data-title="AC11.01 | Master the fundamental laws of electricity in order to work on network and telecommunications equipment"
+                      data-fait="Learning fundamental laws (R1.04), understanding mathematical implications (R1.13, R2.14), learning useful theorems (R2.05), and performing voltage, current, and resistance measurements on analog breadboards in labs (R2.04)."
+                      data-pourquoi="Understand the physical operation of electrically powered network equipment in order to work on them safely and knowledgeably."
+                      data-comment="Using analog breadboards, applying fundamental electrical laws, reading electrical diagrams, and tutorials."
+                      data-difficultes="Device calibration and interpretation, discovering complex physical theories and laws."
+                      data-appris="Electrical variables and signals are the core foundation of telecommunications."
+                      data-autrement="Take more time to redo exercises and laboratory manipulations.">
+                      AC11.01 | Master the fundamental laws of electricity in order to work on network and telecommunications equipment
+                  </li>
+                  <li class="ac-trigger"
+                      data-title="AC11.02 | Understand the architecture and foundations of digital systems, the principles of information coding, communications, and the Internet"
+                      data-fait="Study of binary and hexadecimal systems, floating point representation, logic gates (R1.06), technical English (R1.10), digitization of information (R2.06), databases (R2.07), and web development (R2.09)."
+                      data-pourquoi="Understand the internal logic of computer systems and communication protocols."
+                      data-comment="Lectures, tutorials, and various practical exercises."
+                      data-difficultes="Floating point binary representation and digitization of information."
+                      data-appris="How logical systems work, web development, and database utilization."
+                      data-autrement="Work more on resources where I have gaps.">
+                      AC11.02 | Understand the architecture and foundations of digital systems, the principles of information coding, communications, and the Internet
+                  </li>
+                  <li class="ac-trigger"
+                      data-title="AC11.03 | Configure the basic functions of the local area network"
+                      data-fait="Introduction to computer networks (R1.01) and study of active devices (R1.03)."
+                      data-pourquoi="Understand the internal logic of computer systems and communication protocols."
+                      data-comment="Lectures, IP addressing exercises, frame analysis, and local network lab configurations."
+                      data-difficultes="Understanding packet routing logic and configuring network equipment correctly."
+                      data-appris="How to construct a local network cabling plan and implement IP routing."
+                      data-autrement="Configure more network topologies manually to gain speed.">
+                      AC11.03 | Configure the basic functions of the local area network
+                  </li>
+                  <li class="ac-trigger"
+                      data-title="AC11.04 | Master the roles and fundamental principles of operating systems to interact with them for network and services configuration and administration"
+                      data-fait="Studied principles and architecture of networks (detailed study of Ethernet, ARP, ICMP protocols / discovery of IPv4, TCP, UDP, and application protocols (R1.02)), operating system basics (Linux (R2.08)), technical English (R1.10), network services fundamentals (R2.03), and practiced Windows administration (R2.02)."
+                      data-pourquoi="I did this to acquire the basic skills required to configure a network or a server, as well as their associated services."
+                      data-comment="Lectures, various labs (TPs), and tutorials (TDs)."
+                      data-difficultes="Learning the principles of operating systems and network services fundamentals."
+                      data-appris="I can now administer a Windows server, a local network, and basic services."
+                      data-autrement="Redo the labs where I struggled to understand what I was doing.">
+                      AC11.04 | Master the roles and fundamental principles of operating systems to interact with them for network and services configuration and administration
+                  </li>
+                  <li class="ac-trigger"
+                      data-title="AC11.05 | Identify local network malfunctions and know how to report them"
+                      data-fait="I used Wireshark software along with diagnostic commands (R2.02)."
+                      data-pourquoi="To identify and troubleshoot malfunctions in a local network."
+                      data-comment="Lectures and laboratory exercises."
+                      data-difficultes="Using Wireshark filters and identifying specific network issues."
+                      data-appris="I can easily use other diagnostic tools and find specific network issues faster."
+                      data-autrement="Configure more network topologies manually to gain speed.">
+                      AC11.05 | Identify local network malfunctions and know how to report them
+                  </li>
+                  <li class="ac-trigger"
+                      data-title="AC11.06 | Install a client workstation and explain the setup procedure"
+                      data-fait="I created and administered client workstations under Windows and Linux."
+                      data-pourquoi="Because setting up client workstations is a daily task of an administrator, and learning to document my work is essential for smooth teamwork."
+                      data-comment="Through multiple laboratory sessions."
+                      data-difficultes="Configuring OS environments like Windows."
+                      data-appris="Creating and administering client workstations."
+                      data-autrement="Nothing, I believe what I did during the year is already more than sufficient.">
+                      AC11.06 | Install a client workstation and explain the setup procedure
+                  </li>
+                    </ul>
+                    <a href="#projets" class="btn-voir-projets" data-filter=".filter-branding">
+                      <i class="bi bi-arrow-up-right-circle"></i> View associated projects
+                    </a>
                   </div>
-
-                  <!-- PROGRAM -->
-                  <div class="competence-card cmp-yellow" data-filter=".filter-photography">
-                    <div class="competence-card-header">
-                      <div class="competence-card-title">
-                        <i class="bi bi-code-slash"></i>
-                        <h3>Program</h3>
-                      </div>
-                      <i class="bi bi-chevron-down competence-chevron"></i>
-                    </div>
-                    <p class="competence-desc">Create scripts, tools, and computer applications.</p>
-                    <div class="competence-details">
-                      <ul class="competence-skills-list">
-                        <li class="ac-trigger"
-                            data-title="AC13.01 | Use a computer system and its tools"
-                            data-fait="Near-daily use of computer systems and IT tools."
-                            data-pourquoi="Mastering one's tools and environment is the key to organized, fast, and effective scripting."
-                            data-comment="Lectures, labs, and daily use of these tools and systems."
-                            data-difficultes="Remembering specific commands that are useful for multiple purposes."
-                            data-appris="I can easily work with an IDE and manage project code using Git."
-                            data-autrement="Do more autonomous tasks to force myself to internalize specific commands.">
-                            AC13.01 | Use a computer system and its tools
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC13.02 | Read, execute, debug and modify a program"
-                            data-fait="Modifying programs after reading and understanding them to suit my needs."
-                            data-pourquoi="To be able to reuse existing code by understanding how it is written and how to modify it."
-                            data-comment="Theoretical lectures and laboratory sessions."
-                            data-difficultes="Understanding the purpose of specific lines and how to modify them."
-                            data-appris="I can find my way around programs that are not mine, debug issues within my reach, and modify sections as needed."
-                            data-autrement="Re-work on some codes I already modified to avoid forgetting key concepts.">
-                            AC13.02 | Read, execute, debug and modify a program
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC13.03 | Translate an algorithm, in a given language and environment"
-                            data-fait="Design of sorting and search algorithms in Python (Python Essentials 1 & 2 Certified)."
-                            data-pourquoi="Algorithms represent pure logic, while the language is only the tool to express it. Knowing how to transpose logic across environments is key to programming."
-                            data-comment="Lectures and laboratory sessions."
-                            data-difficultes="Using Python and other programming languages."
-                            data-appris="Assimilation of syntax and environment rules."
-                            data-autrement="Export algorithms to other environments using different languages to understand them better.">
-                            AC13.03 | Translate an algorithm, in a given language and environment
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC13.04 | Understand the architecture and technologies of a website"
-                            data-fait="Studying the architecture and different technologies of a website."
-                            data-pourquoi="Web interfaces are the industry standard, including for administering network equipment (admin panels, monitoring dashboards). It is thus very useful to understand how they are built."
-                            data-comment="Lectures and laboratory sessions."
-                            data-difficultes="Using technologies like frameworks or database integration."
-                            data-appris="How a site can be structured and how to use specific web technologies."
-                            data-autrement="Redo specific lab sessions to better master functionalities learned in class.">
-                            AC13.04 | Understand the architecture and technologies of a website
-                        </li>
-                        <li class="ac-trigger"
-                            data-title="AC13.05 | Choose data management mechanisms suitable for tool development and justify choices"
-                            data-fait="Writing lab reports and making oral presentations of results to peers."
-                            data-pourquoi="A network technician must know how to explain technical solutions to non-specialists."
-                            data-comment="Written and oral communication exercises, translating technical terms into everyday language."
-                            data-difficultes="Finding the right level of detail depending on the audience and avoiding overly technical jargon."
-                            data-appris="Discourse clarity is as important as technical mastery in the professional world."
-                            data-autrement="Systematically prepare a simplified glossary before any presentation.">
-                            AC13.05 | Choose data management mechanisms suitable for tool development and justify choices
-                        </li>
-                      </ul>
-                      <a href="#portfolio" class="btn-voir-projets" data-filter=".filter-photography">
-                        <i class="bi bi-arrow-up-right-circle"></i> View associated projects
-                      </a>
-                    </div>
-                  </div>
-
                 </div>
-              </div>
-
-              <div class="col-lg-4">
-                <div class="skills-sidebar">
-                  <div class="technologies-section" data-aos="fade-up" data-aos-delay="400">
-                    <h5 class="tech-title">Main Technologies</h5>
-                    <div class="tech-stack">
-                      <div class="tech-item">
-                        <i class="bi bi-filetype-py"></i>
-                        <span>Python</span>
-                      </div>
-                      <div class="tech-item">
-                        <i class="bi bi-terminal"></i>
-                        <span>Linux</span>
-                      </div>
-                      <div class="tech-item">
-                        <i class="bi bi-filetype-css"></i>
-                        <span>CSS</span>
-                      </div>
-                      <div class="tech-item">
-                        <i class="bi bi-filetype-html"></i>
-                        <span>HTML</span>
-                      </div>
+                <!-- CONNECTER -->
+                <div class="competence-card cmp-orange" data-filter=".filter-web">
+                  <div class="competence-card-header">
+                    <div class="competence-card-title">
+                      <i class="bi bi-diagram-3"></i>
+                      <h3>Connect</h3>
                     </div>
+                    <i class="bi bi-chevron-down competence-chevron"></i>
+                  </div>
+                  <p class="competence-desc">Connect users and businesses to the Internet.</p>
+                  <div class="competence-details">
+                    <ul class="competence-skills-list">
+                      <li class="ac-trigger"
+                          data-title="AC12.01 | Measure, analyze, and comment on signals"
+                          data-fait="I generated signals and subsequently analyzed them using specific measuring instruments."
+                          data-pourquoi="Signal analysis is a fundamental basis in the daily life of a telecommunications technician."
+                          data-comment="Using an oscilloscope, signal generator, reading frequency graphs, and comparing theory with practice."
+                          data-difficultes="Correctly setting oscilloscope parameters, analyzing and commenting on the signals."
+                          data-appris="How to generate a signal and analyze simple signals."
+                          data-autrement="Conduct more research to better understand signal operations.">
+                          AC12.01 | Measure, analyze, and comment on signals
+                      </li>
+                      <li class="ac-trigger"
+                          data-title="AC12.02 | Characterize elementary transmission systems"
+                          data-fait="Modeling and analyzing the operation of wireless links."
+                          data-pourquoi="Wireless networking is now omnipresent in companies. Understanding its propagation and interference mechanisms is required to deploy and secure reliable, high-performance WiFi networks."
+                          data-comment="Theoretical lectures, Shannon's formula, and lab sessions on transmission boards."
+                          data-difficultes="Linking mathematical formulas to observed physical realities and understanding the practical work."
+                          data-appris="Each transmission medium has its own constraints (bandwidth, attenuation, noise)."
+                          data-autrement="Use software simulations to visualize physical phenomena.">
+                          AC12.02 | Characterize elementary transmission systems
+                      </li>
+                      <li class="ac-trigger"
+                          data-title="AC12.03 | Deploy transmission media"
+                          data-fait="I designed and deployed complete network topologies from scratch. This included IP addressing plan design, physical cabling, active equipment configuration, and final connectivity testing."
+                          data-pourquoi="Deploying and studying media helps analyze cabling structure, identify faults, and certify a local area network cabling installation."
+                          data-comment="Structured cabling labs, using a cable tester, and lectures."
+                          data-difficultes="Working effectively in a team."
+                          data-appris="Physical cabling quality is key to ensuring stable network performance, and planning work beforehand is essential."
+                          data-autrement="Practice cabling more beforehand to gain speed and precision.">
+                          AC12.03 | Deploy transmission media
+                      </li>
+                      <li class="ac-trigger"
+                          data-title="AC12.04 | Connect les systèmes de ToIP"
+                          data-fait="Setting up an IP telephony system with Cisco and Fanvil IP phones."
+                          data-pourquoi="ToIP is gradually replacing traditional telephony in companies."
+                          data-comment="Configuring a Fanvil (Asterisk server), a Cisco (Alpine server), SIP account configuration, and call testing."
+                          data-difficultes="Understanding SIP/RTP protocols and diagnosing communication issues."
+                          data-appris="VoIP requires meticulous management of its servers."
+                          data-autrement="Work a bit more on the theoretical part.">
+                          AC12.04 | Connect les systèmes de ToIP
+                      </li>
+                      <li class="ac-trigger"
+                          data-title="AC12.05 | Communicate with a third party and adapt one's speech"
+                          data-fait="Writing lab reports, oral presentations of results to peers."
+                          data-pourquoi="A network technician must know how to explain technical solutions to non-specialists."
+                          data-comment="Written and oral communication exercises, translating technical terms into everyday language."
+                          data-difficultes="Finding the right level of detail depending on the audience."
+                          data-appris="Discourse clarity is as important as technical mastery in the professional world."
+                          data-autrement="Systematically prepare a simplified glossary before any presentation.">
+                          AC12.05 | Communicate with a third party and adapt one's speech
+                      </li>
+                    </ul>
+                    <a href="#projets" class="btn-voir-projets" data-filter=".filter-web">
+                      <i class="bi bi-arrow-up-right-circle"></i> View associated projects
+                    </a>
+                  </div>
+                </div>
+
+                <!-- PROGRAMMER -->
+                <div class="competence-card cmp-yellow" data-filter=".filter-photography">
+                  <div class="competence-card-header">
+                    <div class="competence-card-title">
+                      <i class="bi bi-code-slash"></i>
+                      <h3>Program</h3>
+                    </div>
+                    <i class="bi bi-chevron-down competence-chevron"></i>
+                  </div>
+                  <p class="competence-desc">Create scripts, tools, and computer applications.</p>
+                  <div class="competence-details">
+                    <ul class="competence-skills-list">
+                  <li class="ac-trigger"
+                          data-title="AC13.01 | Use a computer system and its tools"
+                          data-fait="Near-daily use of computer systems and IT tools."
+                          data-pourquoi="Mastering one's tools and environment is the key to organized, fast, and effective scripting."
+                          data-comment="Lectures, labs, and daily use of these tools and systems."
+                          data-difficultes="Remembering specific commands that are useful for multiple purposes."
+                          data-appris="I can easily work with an IDE and manage project code using Git."
+                          data-autrement="Do more autonomous tasks to force myself to internalize specific commands.">
+                          AC13.01 | Use a computer system and its tools
+                      </li>
+                      <li class="ac-trigger"
+                          data-title="AC13.02 | Read, execute, debug and modify a program"
+                          data-fait="Modifying programs after reading and understanding them to suit my needs."
+                          data-pourquoi="To be able to reuse existing code by understanding how it is written and how to modify it."
+                          data-comment="Theoretical lectures and laboratory sessions."
+                          data-difficultes="Understanding the purpose of specific lines and how to modify them."
+                          data-appris="I can find my way around programs that are not mine, debug issues within my reach, and modify sections as needed."
+                          data-autrement="Re-work on some codes I already modified to avoid forgetting key concepts.">
+                          AC13.02 | Read, execute, debug and modify a program
+                      </li>
+                      <li class="ac-trigger"
+                          data-title="AC13.03 | Translate an algorithm, in a given language and environment"
+                          data-fait="Design of sorting and search algorithms in Python (Python Essentials 1 & 2 Certified)."
+                          data-pourquoi="Algorithms represent pure logic, while the language is only the tool to express it. Knowing how to transpose logic across environments is key to programming."
+                          data-comment="Lectures and laboratory sessions."
+                          data-difficultes="Using Python and other programming languages."
+                          data-appris="Assimilation of syntax and environment rules."
+                          data-autrement="Export algorithms to other environments using different languages to understand them better.">
+                          AC13.03 | Translate an algorithm, in a given language and environment
+                      </li>
+                      <li class="ac-trigger"
+                          data-title="AC13.04 | Understand the architecture and technologies of a website"
+                          data-fait="Studying the architecture and different technologies of a website."
+                          data-pourquoi="Web interfaces are the industry standard, including for administering network equipment (admin panels, monitoring dashboards). It is thus very useful to understand how they are built."
+                          data-comment="Lectures and laboratory sessions."
+                          data-difficultes="Using technologies like frameworks or database integration."
+                          data-appris="How a site can be structured and how to use specific web technologies."
+                          data-autrement="Redo specific lab sessions to better master functionalities learned in class.">
+                          AC13.04 | Understand the architecture and technologies of a website
+                      </li>
+                      <li class="ac-trigger"
+                          data-title="AC13.05 | Choose data management mechanisms suitable for tool development and justify choices"
+                          data-fait="Writing lab reports, oral presentations of results to peers."
+                          data-pourquoi="A network technician must know how to explain technical solutions to non-specialists."
+                          data-comment="Written and oral communication exercises, translating technical terms into everyday language."
+                          data-difficultes="Finding the right level of detail depending on the audience and avoiding overly technical jargon."
+                          data-appris="Discourse clarity is as important as technical mastery in the professional world."
+                          data-autrement="Systematically prepare a simplified glossary before any presentation.">
+                          AC13.05 | Choose data management mechanisms suitable for tool development and justify choices
+                      </li>
+                    </ul>
+                    <a href="#projets" class="btn-voir-projets" data-filter=".filter-photography">
+                      <i class="bi bi-arrow-up-right-circle"></i> View associated projects
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
+            <div class="col-lg-4">
+              <div class="skills-sidebar">
+                <div class="technologies-section" data-aos="fade-up" data-aos-delay="400">
+                  <h5 class="tech-title">Main Technologies</h5>
+                  <div class="tech-stack">
+                    <div class="tech-item">
+                      <i class="bi bi-filetype-py"></i>
+                      <span>Python</span>
+                    </div>
+                    <div class="tech-item">
+                      <i class="bi bi-terminal"></i>
+                      <span>Linux</span>
+                    </div>
+                    <div class="tech-item">
+                      <i class="bi bi-windows"></i>
+                      <span>Windows Server / AD</span>
+                    </div>
+                    <div class="tech-item">
+                      <i class="bi bi-box-seam"></i>
+                      <span>Docker</span>
+                    </div>
+                    <div class="tech-item">
+                      <i class="bi bi-hdd-network"></i>
+                      <span>Cisco IOS / VLAN</span>
+                    </div>
+                    <div class="tech-item">
+                      <i class="bi bi-database"></i>
+                      <span>PostgreSQL</span>
+                    </div>
+                    <div class="tech-item">
+                      <i class="bi bi-search"></i>
+                      <span>Wireshark</span>
+                    </div>
+                    <div class="tech-item">
+                      <i class="bi bi-git"></i>
+                      <span>Git</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
-        </section>
-        
-        <section id="resume" class="resume section">
+        </div>
 
+      </section><!-- Skill Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
-      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row align-items-start">
           <div class="col-lg-5" data-aos="fade-right" data-aos-delay="200">
@@ -478,32 +514,13 @@
                   <div class="timeline-dot"></div>
                   <div class="timeline-content">
                     <div class="position-meta">
-                      <span class="timeline-year">June 2024 - July 2024</span>
+                      <span class="timeline-year">Juin 2024 - Juillet 2024</span>
                     </div>
                     <h3>Intern</h3>
                     <h4>Wasaba Packaging, Pointe-Noire</h4>
                     <p>• Restocking assembled items displayed on shelves for visitors. <br>• Shaping printed products (cutting, folding, binding). <br>• Daily maintenance of printing machines.</p>
                   </div>
                 </div>
-                    <div class="certification-section" data-aos="fade-up" data-aos-delay="400">
-                     <h4>Professional Certifications</h4>
-                     <div class="certifications">
-                      <div class="cert-item">
-                        <i class="bi bi-patch-check"></i>
-                        <div class="cert-details">
-                          <span class="cert-name">MOOC SecNumAcadémie – Introduction to Cybersecurity</span>
-                          <span class="cert-provider">ANSSI • 2025</span>
-                        </div>
-                      </div>
-                      <div class="cert-item">
-                        <i class="bi bi-patch-check"></i>
-                        <div class="cert-details">
-                          <span class="cert-name">Python Essentials</span>
-                          <span class="cert-provider">Cisco Networking Academy • 2025</span>
-                        </div>
-                      </div>
-                </div>
-              </div>
               </div>
             </div>
           </div>
@@ -529,8 +546,8 @@
                       <span class="graduation-year">2024 - 2025</span>
                     </div>
                   </div>
-                   <div class="education-details">
-                    <p>General Baccalaureate specializing in Mathematics and Physics-Chemistry</p>
+                  <div class="education-details">
+                    <p>High School Diploma (Baccalauréat) général avec spécialités Mathématiques et Physique-Chimie</p>
                   </div>
                 </div>
 
@@ -551,13 +568,102 @@
           </div>
         </div>
 
+        <!-- Certifications Section (Below Expérience & Education, Centered) -->
+        <div class="row justify-content-center mt-5" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-12">
+            <div class="certification-section">
+              <div class="section-intro text-center d-flex flex-column align-items-center">
+                <div class="icon-wrapper">
+                  <i class="bi bi-patch-check-fill"></i>
+                </div>
+                <h2>Professional Certifications</h2>
+              </div>
+              
+              <div class="row text-start mt-4">
+                <!-- Left Column: 2 certifications -->
+                <div class="col-md-6 mb-4">
+                  <div class="certifications">
+                    <div class="cert-item">
+                      <i class="bi bi-patch-check"></i>
+                      <div class="cert-details">
+                        <span class="cert-name">MOOC SecNumAcadémie – Introduction to Cybersecurity</span>
+                        <span class="cert-provider">ANSSI • 2025</span>
+                      </div>
+                    </div>
+                    
+                    <div class="cert-item">
+                      <i class="bi bi-patch-check"></i>
+                      <div class="cert-details">
+                        <span class="cert-name">Python Essentials</span>
+                        <span class="cert-provider">Cisco Networking Academy • 2025 - 2026</span>
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400" style="margin-top: 10px;">
+                          <a class="btn-primary" data-bs-toggle="collapse" href="#badge-collapse-python" role="button" aria-expanded="false" aria-controls="badge-collapse-python">View my badge</a>
+                        </div>
+                        <div class="collapse" id="badge-collapse-python" style="margin-top: 15px;">
+                          <div class="d-flex flex-wrap gap-3">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="510f1e7c-0870-4a15-9789-b0a94e5e3d56" data-share-badge-host="https://www.credly.com"></div>
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="4d25f617-c233-46be-9e6a-f87992fcc9fd" data-share-badge-host="https://www.credly.com"></div>
+                          </div>
+                          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Right Column: 2 certifications -->
+                <div class="col-md-6 mb-4">
+                  <div class="certifications">
+                    <div class="cert-item">
+                      <i class="bi bi-patch-check"></i>
+                      <div class="cert-details">
+                        <span class="cert-name">Introduction to Cybersecurity</span>
+                        <span class="cert-provider">Cisco Networking Academy • 2025</span>
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400" style="margin-top: 10px;">
+                          <a class="btn-primary" data-bs-toggle="collapse" href="#badge-collapse-cyber" role="button" aria-expanded="false" aria-controls="badge-collapse-cyber">View my badge</a>
+                        </div>
+                        <div class="collapse" id="badge-collapse-cyber" style="margin-top: 15px;">
+                          <div class="d-flex flex-wrap gap-3">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7918c2a9-0649-4066-882b-d15e92ed7cef" data-share-badge-host="https://www.credly.com"></div>
+                          </div>
+                          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="cert-item">
+                      <i class="bi bi-patch-check"></i>
+                      <div class="cert-details">
+                        <span class="cert-name">CCNA: Switching, Routing, and Wireless Essentials</span>
+                        <span class="cert-provider">Cisco Networking Academy • 2026</span>
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="400" style="margin-top: 10px;">
+                          <a class="btn-primary" data-bs-toggle="collapse" href="#badge-collapse-ccna" role="button" aria-expanded="false" aria-controls="badge-collapse-ccna">View my badge</a>
+                        </div>
+                        <div class="collapse" id="badge-collapse-ccna" style="margin-top: 15px;">
+                          <div class="d-flex flex-wrap gap-3">
+                            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="0cbddb4b-dc50-461b-8d15-812a0dcc9531" data-share-badge-host="https://www.credly.com"></div>
+                          </div>
+                          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-    </section><section id="portfolio" class="portfolio section">
+    </section><!-- /Resume Section -->
+
+    <!-- Projets Section -->
+    <section id="projets" class="portfolio section">
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Portfolio</h2>
-       </div><div class="container" data-aos="fade-up" data-aos-delay="100">
+      </div><div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
@@ -579,7 +685,6 @@
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/mooc-image.jpg" class="glightbox action-btn preview-btn" title="Awareness"><i class="bi bi-eye"></i></a>
-                      <a href="badge_cisco_cyber.pdf" class="action-btn details-btn" title="View the extract of technical report" target="_blank"><i class="bi bi-file-earmark-text"></i></a>
                     </div>
                   </div>
                 </div>
@@ -590,11 +695,6 @@
                   </div>
                   <h3 class="portfolio-title">SAE 1.01 - Raising awareness about IT hygiene and cybersecurity</h3>
                   <p class="portfolio-description">Learning to protect oneself and raising awareness among others about IT hygiene and Internet safety.</p>
-                  <div class="project-markdown-link mt-3">
-                    <a href="badge_cisco_cyber.pdf" class="md-link" target="_blank">
-                      <i class="bi bi-file-pdf-fill"></i> View the extract of technical report
-                    </a>
-                  </div>
                 </div>
               </div>
             </div><div class="col-lg-6 portfolio-item isotope-item filter-branding">
@@ -725,7 +825,7 @@
             </div><div class="col-lg-6 portfolio-item isotope-item filter-branding">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/Windows-server.jpg" class="img-fluid" alt="Windows Lab" loading="lazy">
+                  <img src="assets/img/portfolio/Windows-server.jpg" class="img-fluid" alt="TP Virtualisation" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
                       <a href="assets/img/portfolio/Windows-server.jpg" class="glightbox action-btn preview-btn" title="Windows Server Administration"><i class="bi bi-eye"></i></a>
@@ -747,13 +847,13 @@
                   </div>
                 </div>
               </div>
-            </div><div class="col-lg-6 portfolio-item isotope-item filter-branding">
+            </div><div class="col-lg-6 portfolio-item isotope-item filter-branding filter-web">
               <div class="portfolio-card">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/Fanvil-telephone-SIP.jpg" class="img-fluid" alt="Asterisk Lab" loading="lazy">
+                  <img src="assets/img/portfolio/Fanvil-telephone-SIP.jpg" class="img-fluid" alt="TP ToIP" loading="lazy">
                   <div class="portfolio-overlay">
                     <div class="portfolio-actions">
-                      <a href="assets/img/portfolio/Fanvil-telephone-SIP.jpg" class="glightbox action-btn preview-btn" title="Enterprise Telephony"><i class="bi bi-eye"></i></a>
+                      <a href="assets/img/portfolio/Fanvil-telephone-SIP.jpg" class="glightbox action-btn preview-btn" title="Enterprise Telephony (VoIP/ToIP)"><i class="bi bi-eye"></i></a>
                       <a href="Travaux pratiques sur Asterisk 1 et 2.anglais.html" class="action-btn details-btn" title="View the extract of technical report"><i class="bi bi-file-earmark-text"></i></a>
                     </div>
                   </div>
@@ -772,11 +872,39 @@
                   </div>
                 </div>
               </div>
-            </div></div></div>
+            </div>
+            <div class="col-lg-6 portfolio-item isotope-item filter-branding filter-web filter-photography">
+              <div class="portfolio-card">
+                <div class="portfolio-image">
+                  <img src="assets/img/portfolio/SAE21-24.png" class="img-fluid" alt="SAE 2.04" loading="lazy">
+                  <div class="portfolio-overlay">
+                    <div class="portfolio-actions">
+                      <a href="assets/img/portfolio/SAE21-24.png" class="glightbox action-btn preview-btn" title="Group Enterprise Infrastructure"><i class="bi bi-eye"></i></a>
+                      <a href="Rapport final .pdf" class="action-btn details-btn" title="View the extract of technical report"><i class="bi bi-file-earmark-text"></i></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="portfolio-content">
+                  <div class="portfolio-meta">
+                    <span class="portfolio-category">Integrative Project</span>
+                    <span class="portfolio-year">2026</span>
+                  </div>
+                  <h3 class="portfolio-title">SAE2.04 - Integrative Project</h3>
+                  <p class="portfolio-description">Implementation of an enterprise infrastructure composed of Cisco devices, workstations, IP phones, IP cameras, servers, and temperature sensors. </p>
+                  <div class="project-markdown-link mt-3">
+                    <a href="Rapport final .pdf" class="md-link">
+                      <i class="bi bi-markdown-fill"></i> View the extract of technical report
+                    </a>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
 
       </div>
 
     </section>
+
 
   <!-- AC Reflexive Modal (global) -->
   <div id="ac-modal-overlay" class="ac-modal-overlay" style="display:none;">
@@ -813,7 +941,7 @@
             <p id="ac-txt-appris"></p>
           </div>
           <div class="ac-reflexive-block block-autrement">
-            <div class="bi bi-arrow-repeat"></div>
+            <div class="ac-block-icon"><i class="bi bi-arrow-repeat"></i></div>
             <h6>What I would do differently</h6>
             <p id="ac-txt-autrement"></p>
           </div>
@@ -830,6 +958,7 @@
       <div class="social-links d-flex justify-content-center">
         <a href="https://github.com/JACK-ux52" target="_blank"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/wanny-yembele-77747238a" target="_blank"><i class="bi bi-linkedin"></i></a>
+        <a href="mailto:wanny.yembele@gmail.com" style="background:#28a745;border-color:#28a745;"><i class="bi bi-envelope-fill"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
@@ -837,14 +966,23 @@
           <a href="légal.anglais.html">Legal Notice & Credits</a>
         </div>
         <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
           Original design by <a href="https://bootstrapmade.com/" target="_blank">BootstrapMade</a>
         </div>
       </div>
     </div>
   </footer>
 
+  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/aos/aos.js"></script>
   <script src="vendor/purecounter/purecounter_vanilla.js"></script>
@@ -855,10 +993,11 @@
   <script src="vendor/glightbox/js/glightbox.min.js"></script>
   <script src="vendor/swiper/swiper-bundle.min.js"></script>
 
-
   <!-- Main JS File -->
   <script src="js/main.js"></script>
 
+
 </body>
+
 
 </html>
