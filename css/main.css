@@ -631,6 +631,7 @@ section,
   }
 }
 
+.btn-primary,
 .hero .hero-content .hero-actions .btn-primary {
   padding: 14px 32px;
   background: var(--accent-color);
@@ -640,12 +641,16 @@ section,
   text-decoration: none;
   transition: all 0.3s ease;
   border: 2px solid var(--accent-color);
+  display: inline-block;
+  text-align: center;
 }
 
+.btn-primary:hover,
 .hero .hero-content .hero-actions .btn-primary:hover {
   background: color-mix(in srgb, var(--accent-color), black 10%);
   border-color: color-mix(in srgb, var(--accent-color), black 10%);
   transform: translateY(-2px);
+  color: var(--contrast-color);
 }
 
 .hero .hero-content .hero-actions .btn-secondary {
@@ -2594,14 +2599,12 @@ section,
   /* Add your styles here */
 }
 
-/* Make certification styles apply when moved under professional-journey */
-.resume .professional-journey + .certification-section,
-.resume .professional-journey .certification-section {
-  margin-top: 2rem;
+/* Make certification styles apply anywhere under resume */
+.resume .certification-section {
+  margin-top: 3rem;
 }
 
-/* Nested styles copied from existing education-skills rules */
-.resume .professional-journey .certification-section h4 {
+.resume .certification-section h4 {
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--heading-color);
@@ -2609,7 +2612,7 @@ section,
   letter-spacing: -0.01em;
 }
 
-.resume .professional-journey .certification-section .certifications .cert-item {
+.resume .certification-section .certifications .cert-item {
   display: flex;
   align-items: center;
   gap: 0.8rem;
@@ -2617,29 +2620,30 @@ section,
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
 }
 
-.resume .professional-journey .certification-section .certifications .cert-item:last-child {
+.resume .certification-section .certifications .cert-item:last-child {
   border-bottom: none;
 }
 
-.resume .professional-journey .certification-section .certifications .cert-item i {
+.resume .certification-section .certifications .cert-item i {
   color: var(--accent-color);
   font-size: 1.1rem;
   flex-shrink: 0;
 }
 
-.resume .professional-journey .certification-section .certifications .cert-item .cert-details {
+.resume .certification-section .certifications .cert-item .cert-details {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+  width: 100%;
 }
 
-.resume .professional-journey .certification-section .certifications .cert-item .cert-details .cert-name {
+.resume .certification-section .certifications .cert-item .cert-details .cert-name {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--heading-color);
 }
 
-.resume .professional-journey .certification-section .certifications .cert-item .cert-details .cert-provider {
+.resume .certification-section .certifications .cert-item .cert-details .cert-provider {
   font-size: 0.85rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
 }
