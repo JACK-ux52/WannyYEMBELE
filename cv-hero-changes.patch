@@ -1,0 +1,28 @@
+diff --git a/index.html b/index.html
+index 77d2785..d82f092 100644
+--- a/index.html
++++ b/index.html
+@@ -102,6 +102,9 @@
+               </p>
+               <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                 <a href="#projets" class="btn-primary">Voir mes projets</a>
++                <a href="CV_WannyYEMBELE.pdf" target="_blank" rel="noopener" class="btn-primary" style="margin-left:10px;background:#0d6efd;border-color:#0d6efd;">
++                  <i class="bi bi-file-earmark-person" style="margin-right:6px;"></i>Voir mon CV
++                </a>
+                 <a href="mailto:wanny.yembele@gmail.com" class="btn-primary" style="margin-left:10px;background:#28a745;border-color:#28a745;">Me contacter</a>
+               </div>
+             </div>
+@@ -496,8 +499,11 @@
+       <div class="container section-title" data-aos="fade-up">
+         <h2>CV</h2>
+         <div class="resume-download-btn mt-3" style="margin-bottom: 20px;">
+-          <a href="CV_WannyYEMBELE.pdf" class="btn-primary" download="CV_WannyYEMBELE.pdf">
+-            <i class="bi bi-download"></i> Télécharger mon CV
++          <a href="CV_WannyYEMBELE.pdf" target="_blank" rel="noopener" class="btn-primary" style="background:#0d6efd;border-color:#0d6efd;">
++            <i class="bi bi-eye"></i> Consulter mon CV
++          </a>
++          <a href="CV_WannyYEMBELE.pdf" class="btn-primary" download="CV_WannyYEMBELE.pdf" style="margin-left:10px;">
++            <i class="bi bi-download"></i> Télécharger
+           </a>
+         </div>
+       </div><!-- End Section Title -->

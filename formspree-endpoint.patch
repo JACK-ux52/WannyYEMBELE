@@ -1,0 +1,63 @@
+diff --git a/index.html b/index.html
+index 8089b2d..5ad5929 100644
+--- a/index.html
++++ b/index.html
+@@ -1014,7 +1014,7 @@
+               <h3>Envoyer un message</h3>
+             </div>
+ 
+-            <form action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="post" class="php-email-form">
++            <form action="https://formspree.io/f/xbgrddyj" method="post" class="php-email-form">
+               <div class="row">
+                 <div class="col-md-6">
+                   <div class="form-group">
+@@ -1127,6 +1127,49 @@
+     });
+   </script>
+ 
++  <!-- Contact form AJAX submission (Formspree) -->
++  <script>
++    (function () {
++      const form = document.querySelector('.php-email-form');
++      if (!form) return;
++      const loadingEl = form.querySelector('.loading');
++      const errorEl = form.querySelector('.error-message');
++      const sentEl = form.querySelector('.sent-message');
++
++      form.addEventListener('submit', function (e) {
++        e.preventDefault();
++        [loadingEl, errorEl, sentEl].forEach(el => el.style.display = 'none');
++        loadingEl.style.display = 'block';
++
++        fetch(form.action, {
++          method: 'POST',
++          body: new FormData(form),
++          headers: { 'Accept': 'application/json' }
++        })
++          .then(response => {
++            loadingEl.style.display = 'none';
++            if (response.ok) {
++              sentEl.style.display = 'block';
++              form.reset();
++            } else {
++              response.json().then(data => {
++                errorEl.textContent = (data.errors || []).map(e => e.message).join(', ') || 'Une erreur est survenue, réessaie.';
++                errorEl.style.display = 'block';
++              }).catch(() => {
++                errorEl.textContent = 'Une erreur est survenue, réessaie.';
++                errorEl.style.display = 'block';
++              });
++            }
++          })
++          .catch(() => {
++            loadingEl.style.display = 'none';
++            errorEl.textContent = 'Connexion impossible, réessaie plus tard.';
++            errorEl.style.display = 'block';
++          });
++      });
++    })();
++  </script>
++
+ </body>
+ 
+ 

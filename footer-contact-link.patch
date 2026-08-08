@@ -1,0 +1,13 @@
+diff --git a/index.html b/index.html
+index 5ad5929..7b3c448 100644
+--- a/index.html
++++ b/index.html
+@@ -1066,7 +1066,7 @@
+       <div class="social-links d-flex justify-content-center">
+         <a href="https://github.com/JACK-ux52" target="_blank"><i class="bi bi-github"></i></a>
+         <a href="https://www.linkedin.com/in/wanny-yembele-77747238a" target="_blank"><i class="bi bi-linkedin"></i></a>
+-        <a href="mailto:wanny.yembele@gmail.com" style="background:#28a745;border-color:#28a745;"><i class="bi bi-envelope-fill"></i></a>
++        <a href="#contact" style="background:#28a745;border-color:#28a745;"><i class="bi bi-envelope-fill"></i></a>
+       </div>
+       <div class="container">
+         <div class="copyright">

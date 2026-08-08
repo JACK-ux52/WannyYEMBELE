@@ -1,0 +1,299 @@
+diff --git a/css/main.css b/css/main.css
+index afb5c9b..cc4196e 100644
+--- a/css/main.css
++++ b/css/main.css
+@@ -3362,4 +3362,177 @@ button,
+     .markdown-presentation {
+       padding: 20px;
+     }
+-  }
+\ No newline at end of file
++  }
++/*--------------------------------------------------------------
++# Contact Section
++--------------------------------------------------------------*/
++.contact .info-item {
++  display: flex;
++  align-items: center;
++  gap: 20px;
++  background-color: var(--surface-color);
++  padding: 25px;
++  border-radius: 10px;
++  margin-bottom: 25px;
++}
++
++.contact .info-item .info-icon {
++  width: 56px;
++  height: 56px;
++  min-width: 56px;
++  background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
++  color: var(--accent-color);
++  border-radius: 50%;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  font-size: 24px;
++}
++
++.contact .info-item h4 {
++  font-size: 18px;
++  font-weight: 600;
++  color: var(--heading-color);
++  margin-bottom: 6px;
++}
++
++.contact .info-item p {
++  color: color-mix(in srgb, var(--default-color), transparent 15%);
++  font-size: 15px;
++  margin: 0;
++}
++
++.contact .contact-details {
++  background-color: var(--surface-color);
++  border-radius: 10px;
++  padding: 10px 25px;
++}
++
++.contact .detail-item {
++  display: flex;
++  align-items: center;
++  gap: 16px;
++  padding: 15px 0;
++  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
++}
++
++.contact .detail-item:last-child {
++  border-bottom: none;
++}
++
++.contact .detail-icon {
++  width: 42px;
++  height: 42px;
++  min-width: 42px;
++  background-color: color-mix(in srgb, var(--accent-color), transparent 88%);
++  color: var(--accent-color);
++  border-radius: 8px;
++  display: flex;
++  align-items: center;
++  justify-content: center;
++  font-size: 18px;
++}
++
++.contact .detail-label {
++  display: block;
++  font-size: 13px;
++  color: color-mix(in srgb, var(--default-color), transparent 35%);
++  text-transform: uppercase;
++  letter-spacing: 0.5px;
++}
++
++.contact .detail-value {
++  display: block;
++  font-size: 15px;
++  color: var(--heading-color);
++  font-weight: 500;
++  word-break: break-word;
++}
++
++.contact .form-wrapper {
++  background-color: var(--surface-color);
++  border-radius: 10px;
++  padding: 35px;
++  height: 100%;
++}
++
++.contact .form-header h3 {
++  font-size: 22px;
++  font-weight: 600;
++  color: var(--heading-color);
++  margin-bottom: 25px;
++}
++
++.contact .form-group {
++  margin-bottom: 20px;
++}
++
++.contact .form-group label {
++  display: block;
++  font-size: 14px;
++  font-weight: 500;
++  color: var(--heading-color);
++  margin-bottom: 8px;
++}
++
++.contact .form-group input,
++.contact .form-group textarea {
++  width: 100%;
++  padding: 12px 15px;
++  background-color: var(--background-color);
++  border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
++  border-radius: 6px;
++  color: var(--default-color);
++  font-family: var(--default-font);
++  font-size: 15px;
++}
++
++.contact .form-group input:focus,
++.contact .form-group textarea:focus {
++  outline: none;
++  border-color: var(--accent-color);
++}
++
++.contact .submit-btn {
++  display: inline-flex;
++  align-items: center;
++  gap: 10px;
++  background-color: var(--accent-color);
++  color: var(--contrast-color);
++  border: none;
++  padding: 12px 28px;
++  border-radius: 50px;
++  font-weight: 600;
++  font-size: 15px;
++  cursor: pointer;
++  transition: 0.3s;
++}
++
++.contact .submit-btn:hover {
++  background-color: color-mix(in srgb, var(--accent-color), black 15%);
++}
++
++.contact .loading,
++.contact .error-message,
++.contact .sent-message {
++  display: none;
++  font-size: 14px;
++}
++
++.contact .loading {
++  color: var(--accent-color);
++}
++
++.contact .error-message {
++  color: #e74c3c;
++}
++
++.contact .sent-message {
++  color: var(--accent-color);
++}
++
++@media (max-width: 768px) {
++  .contact .form-wrapper {
++    padding: 25px;
++  }
++}
+diff --git a/index.html b/index.html
+index d82f092..78fbac6 100644
+--- a/index.html
++++ b/index.html
+@@ -68,6 +68,7 @@
+         <li><a href="#skills"><i class="bi bi-gear-fill navicon"></i>Portfolio</a></li>
+         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>Mon CV</a></li>
+         <li><a href="#projets"><i class="bi bi-folder2-open navicon"></i>Mes Projets</a></li>
++        <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
+       </ul>
+     </nav>
+ 
+@@ -961,6 +962,102 @@
+     </div>
+   </div>
+ 
++  <!-- Contact Section -->
++  <section id="contact" class="contact section">
++    <div class="container section-title" data-aos="fade-up">
++      <h2>Contact</h2>
++      <p>Une question, une offre d'alternance, ou juste envie d'échanger ? N'hésite pas à me laisser un message.</p>
++    </div>
++
++    <div class="container" data-aos="fade-up" data-aos-delay="100">
++      <div class="row gy-4">
++
++        <div class="col-lg-5">
++          <div class="info-item">
++            <div class="info-icon"><i class="bi bi-chat-dots"></i></div>
++            <div class="info-content">
++              <h4>Restons en contact</h4>
++              <p>Je suis disponible pour échanger sur une opportunité d'alternance ou tout simplement discuter réseaux et télécoms.</p>
++            </div>
++          </div>
++
++          <div class="contact-details">
++            <div class="detail-item">
++              <div class="detail-icon"><i class="bi bi-envelope-open"></i></div>
++              <div class="detail-content">
++                <span class="detail-label">Email</span>
++                <span class="detail-value">wanny.yembele@gmail.com</span>
++              </div>
++            </div>
++
++            <div class="detail-item">
++              <div class="detail-icon"><i class="bi bi-linkedin"></i></div>
++              <div class="detail-content">
++                <span class="detail-label">LinkedIn</span>
++                <span class="detail-value">wanny-yembele-77747238a</span>
++              </div>
++            </div>
++
++            <div class="detail-item">
++              <div class="detail-icon"><i class="bi bi-geo-alt-fill"></i></div>
++              <div class="detail-content">
++                <span class="detail-label">Localisation</span>
++                <span class="detail-value">Béthune, Hauts-de-France</span>
++              </div>
++            </div>
++          </div>
++        </div>
++
++        <div class="col-lg-7">
++          <div class="form-wrapper">
++            <div class="form-header">
++              <h3>Envoyer un message</h3>
++            </div>
++
++            <form action="https://formspree.io/f/VOTRE_ID_FORMSPREE" method="post" class="php-email-form">
++              <div class="row">
++                <div class="col-md-6">
++                  <div class="form-group">
++                    <label>Nom complet</label>
++                    <input type="text" name="name" required>
++                  </div>
++                </div>
++                <div class="col-md-6">
++                  <div class="form-group">
++                    <label>Adresse email</label>
++                    <input type="email" name="_replyto" required>
++                  </div>
++                </div>
++              </div>
++
++              <div class="form-group">
++                <label>Sujet</label>
++                <input type="text" name="subject" required>
++              </div>
++
++              <div class="form-group">
++                <label for="contactMessage">Message</label>
++                <textarea name="message" id="contactMessage" rows="5" required></textarea>
++              </div>
++
++              <div class="my-3">
++                <div class="loading">Envoi en cours</div>
++                <div class="error-message"></div>
++                <div class="sent-message">Votre message a bien été envoyé. Merci !</div>
++              </div>
++
++              <button type="submit" class="submit-btn">
++                <span>Envoyer</span>
++                <i class="bi bi-arrow-right"></i>
++              </button>
++            </form>
++          </div>
++        </div>
++
++      </div>
++    </div>
++  </section><!-- /Contact Section -->
++
+   </main>
+ 
+   <footer id="footer" class="footer light-background">

@@ -68,6 +68,7 @@
         <li><a href="#skills"><i class="bi bi-gear-fill navicon"></i>Portfolio</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i>Mon CV</a></li>
         <li><a href="#projets"><i class="bi bi-folder2-open navicon"></i>Mes Projets</a></li>
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i>Contact</a></li>
       </ul>
     </nav>
 
@@ -102,7 +103,10 @@
               </p>
               <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
                 <a href="#projets" class="btn-primary">Voir mes projets</a>
-                <a href="mailto:wanny.yembele@gmail.com" class="btn-primary" style="margin-left:10px;background:#28a745;border-color:#28a745;">Me contacter</a>
+                <a href="CV_WannyYEMBELE.pdf" target="_blank" rel="noopener" class="btn-primary btn-cv">
+                  <i class="bi bi-file-earmark-person"></i>Voir mon CV
+                </a>
+                <a href="#contact" class="btn-primary btn-contact">Me contacter</a>
               </div>
             </div>
           </div>
@@ -496,8 +500,11 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>CV</h2>
         <div class="resume-download-btn mt-3" style="margin-bottom: 20px;">
-          <a href="CV_WannyYEMBELE.pdf" class="btn-primary" download="CV_WannyYEMBELE.pdf">
-            <i class="bi bi-download"></i> Télécharger mon CV
+          <a href="CV_WannyYEMBELE.pdf" target="_blank" rel="noopener" class="btn-primary btn-cv">
+            <i class="bi bi-eye"></i> Consulter mon CV
+          </a>
+          <a href="CV_WannyYEMBELE.pdf" class="btn-primary btn-download-cv" id="downloadCvBtn" style="margin-left:10px;">
+            <i class="bi bi-download"></i> Télécharger
           </a>
         </div>
       </div><!-- End Section Title -->
@@ -955,6 +962,102 @@
     </div>
   </div>
 
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Contact</h2>
+      <p>Une question, une offre d'alternance, ou juste envie d'échanger ? N'hésite pas à me laisser un message.</p>
+    </div>
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="row gy-4">
+
+        <div class="col-lg-5">
+          <div class="info-item">
+            <div class="info-icon"><i class="bi bi-chat-dots"></i></div>
+            <div class="info-content">
+              <h4>Restons en contact</h4>
+              <p>Je suis disponible pour échanger sur une opportunité d'alternance ou tout simplement discuter réseaux et télécoms.</p>
+            </div>
+          </div>
+
+          <div class="contact-details">
+            <div class="detail-item">
+              <div class="detail-icon"><i class="bi bi-envelope-open"></i></div>
+              <div class="detail-content">
+                <span class="detail-label">Email</span>
+                <span class="detail-value">wanny.yembele@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon"><i class="bi bi-linkedin"></i></div>
+              <div class="detail-content">
+                <span class="detail-label">LinkedIn</span>
+                <span class="detail-value">wanny-yembele-77747238a</span>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <div class="detail-icon"><i class="bi bi-geo-alt-fill"></i></div>
+              <div class="detail-content">
+                <span class="detail-label">Localisation</span>
+                <span class="detail-value">Béthune, Hauts-de-France</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="form-wrapper">
+            <div class="form-header">
+              <h3>Envoyer un message</h3>
+            </div>
+
+            <form action="https://formspree.io/f/xbgrddyj" method="post" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Nom complet</label>
+                    <input type="text" name="name" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Adresse email</label>
+                    <input type="email" name="_replyto" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Sujet</label>
+                <input type="text" name="subject" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea name="message" id="contactMessage" rows="5" required></textarea>
+              </div>
+
+              <div class="my-3">
+                <div class="loading">Envoi en cours</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Votre message a bien été envoyé. Merci !</div>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                <span>Envoyer</span>
+                <i class="bi bi-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- /Contact Section -->
+
   </main>
 
   <footer id="footer" class="footer light-background">
@@ -963,7 +1066,7 @@
       <div class="social-links d-flex justify-content-center">
         <a href="https://github.com/JACK-ux52" target="_blank"><i class="bi bi-github"></i></a>
         <a href="https://www.linkedin.com/in/wanny-yembele-77747238a" target="_blank"><i class="bi bi-linkedin"></i></a>
-        <a href="mailto:wanny.yembele@gmail.com" style="background:#28a745;border-color:#28a745;"><i class="bi bi-envelope-fill"></i></a>
+        <a href="#contact" style="background:#28a745;border-color:#28a745;"><i class="bi bi-envelope-fill"></i></a>
       </div>
       <div class="container">
         <div class="copyright">
@@ -1001,6 +1104,71 @@
   <!-- Main JS File -->
   <script src="js/main.js"></script>
 
+  <!-- Forced CV download (fallback for browsers ignoring the download attribute) -->
+  <script>
+    document.getElementById('downloadCvBtn')?.addEventListener('click', function (e) {
+      e.preventDefault();
+      const url = this.getAttribute('href');
+      fetch(url)
+        .then(res => res.blob())
+        .then(blob => {
+          const blobUrl = URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = blobUrl;
+          link.download = 'CV_WannyYEMBELE.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          URL.revokeObjectURL(blobUrl);
+        })
+        .catch(() => {
+          window.open(url, '_blank');
+        });
+    });
+  </script>
+
+  <!-- Contact form AJAX submission (Formspree) -->
+  <script>
+    (function () {
+      const form = document.querySelector('.php-email-form');
+      if (!form) return;
+      const loadingEl = form.querySelector('.loading');
+      const errorEl = form.querySelector('.error-message');
+      const sentEl = form.querySelector('.sent-message');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        [loadingEl, errorEl, sentEl].forEach(el => el.style.display = 'none');
+        loadingEl.style.display = 'block';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        })
+          .then(response => {
+            loadingEl.style.display = 'none';
+            if (response.ok) {
+              sentEl.style.display = 'block';
+              form.reset();
+            } else {
+              response.json().then(data => {
+                errorEl.textContent = (data.errors || []).map(e => e.message).join(', ') || 'Une erreur est survenue, réessaie.';
+                errorEl.style.display = 'block';
+              }).catch(() => {
+                errorEl.textContent = 'Une erreur est survenue, réessaie.';
+                errorEl.style.display = 'block';
+              });
+            }
+          })
+          .catch(() => {
+            loadingEl.style.display = 'none';
+            errorEl.textContent = 'Connexion impossible, réessaie plus tard.';
+            errorEl.style.display = 'block';
+          });
+      });
+    })();
+  </script>
 
 </body>
 

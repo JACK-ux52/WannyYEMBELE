@@ -1,0 +1,137 @@
+diff --git a/css/main.css b/css/main.css
+index cc4196e..bf32d94 100644
+--- a/css/main.css
++++ b/css/main.css
+@@ -620,7 +620,8 @@ section,
+ 
+ .hero .hero-content .hero-actions {
+   display: flex;
+-  gap: 1.5rem;
++  flex-wrap: wrap;
++  gap: 1rem;
+   margin-bottom: 4rem;
+ }
+ 
+@@ -641,10 +642,61 @@ section,
+   text-decoration: none;
+   transition: all 0.3s ease;
+   border: 2px solid var(--accent-color);
+-  display: inline-block;
++  display: inline-flex;
++  align-items: center;
++  justify-content: center;
++  white-space: nowrap;
+   text-align: center;
+ }
+ 
++.hero .hero-content .hero-actions .btn-cv {
++  background: #0d6efd;
++  border-color: #0d6efd;
++}
++
++.hero .hero-content .hero-actions .btn-cv:hover {
++  background: color-mix(in srgb, #0d6efd, black 10%);
++  border-color: color-mix(in srgb, #0d6efd, black 10%);
++}
++
++.hero .hero-content .hero-actions .btn-cv i {
++  margin-right: 6px;
++}
++
++.hero .hero-content .hero-actions .btn-contact {
++  background: #28a745;
++  border-color: #28a745;
++}
++
++.hero .hero-content .hero-actions .btn-contact:hover {
++  background: color-mix(in srgb, #28a745, black 10%);
++  border-color: color-mix(in srgb, #28a745, black 10%);
++}
++
++.btn-cv {
++  background: #0d6efd;
++  border-color: #0d6efd;
++}
++
++.btn-cv:hover {
++  background: color-mix(in srgb, #0d6efd, black 10%);
++  border-color: color-mix(in srgb, #0d6efd, black 10%);
++  color: var(--contrast-color);
++}
++
++.btn-download-cv {
++  background: transparent;
++  color: var(--heading-color);
++  border: 2px solid color-mix(in srgb, var(--default-color), transparent 70%);
++  cursor: pointer;
++}
++
++.btn-download-cv:hover {
++  background: transparent;
++  color: var(--accent-color);
++  border-color: var(--accent-color);
++}
++
+ .btn-primary:hover,
+ .hero .hero-content .hero-actions .btn-primary:hover {
+   background: color-mix(in srgb, var(--accent-color), black 10%);
+diff --git a/index.html b/index.html
+index 78fbac6..8089b2d 100644
+--- a/index.html
++++ b/index.html
+@@ -103,10 +103,10 @@
+               </p>
+               <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+                 <a href="#projets" class="btn-primary">Voir mes projets</a>
+-                <a href="CV_WannyYEMBELE.pdf" target="_blank" rel="noopener" class="btn-primary" style="margin-left:10px;background:#0d6efd;border-color:#0d6efd;">
+-                  <i class="bi bi-file-earmark-person" style="margin-right:6px;"></i>Voir mon CV
++                <a href="CV_WannyYEMBELE.pdf" target="_blank" rel="noopener" class="btn-primary btn-cv">
++                  <i class="bi bi-file-earmark-person"></i>Voir mon CV
+                 </a>
+-                <a href="mailto:wanny.yembele@gmail.com" class="btn-primary" style="margin-left:10px;background:#28a745;border-color:#28a745;">Me contacter</a>
++                <a href="#contact" class="btn-primary btn-contact">Me contacter</a>
+               </div>
+             </div>
+           </div>
+@@ -500,10 +500,10 @@
+       <div class="container section-title" data-aos="fade-up">
+         <h2>CV</h2>
+         <div class="resume-download-btn mt-3" style="margin-bottom: 20px;">
+-          <a href="CV_WannyYEMBELE.pdf" target="_blank" rel="noopener" class="btn-primary" style="background:#0d6efd;border-color:#0d6efd;">
++          <a href="CV_WannyYEMBELE.pdf" target="_blank" rel="noopener" class="btn-primary btn-cv">
+             <i class="bi bi-eye"></i> Consulter mon CV
+           </a>
+-          <a href="CV_WannyYEMBELE.pdf" class="btn-primary" download="CV_WannyYEMBELE.pdf" style="margin-left:10px;">
++          <a href="CV_WannyYEMBELE.pdf" class="btn-primary btn-download-cv" id="downloadCvBtn" style="margin-left:10px;">
+             <i class="bi bi-download"></i> Télécharger
+           </a>
+         </div>
+@@ -1104,6 +1104,28 @@
+   <!-- Main JS File -->
+   <script src="js/main.js"></script>
+ 
++  <!-- Forced CV download (fallback for browsers ignoring the download attribute) -->
++  <script>
++    document.getElementById('downloadCvBtn')?.addEventListener('click', function (e) {
++      e.preventDefault();
++      const url = this.getAttribute('href');
++      fetch(url)
++        .then(res => res.blob())
++        .then(blob => {
++          const blobUrl = URL.createObjectURL(blob);
++          const link = document.createElement('a');
++          link.href = blobUrl;
++          link.download = 'CV_WannyYEMBELE.pdf';
++          document.body.appendChild(link);
++          link.click();
++          document.body.removeChild(link);
++          URL.revokeObjectURL(blobUrl);
++        })
++        .catch(() => {
++          window.open(url, '_blank');
++        });
++    });
++  </script>
+ 
+ </body>
+ 
